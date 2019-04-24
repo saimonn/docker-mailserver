@@ -1435,6 +1435,8 @@ load 'test_helper/bats-assert/load'
 @test "checking postfix: ldap lookup works correctly" {
   run docker exec mail_with_ldap /bin/sh -c "postmap -q some.user@localhost.localdomain ldap:/etc/postfix/ldap-users.cf"
   assert_success
+  run docker exec mail_with_ldap /bin/sh -c "postmap -q some.user.without.sysuid@localhost.localdomain ldap:/etc/postfix/ldap-users.cf"
+  assert_success
   assert_output "some.user@localhost.localdomain"
   run docker exec mail_with_ldap /bin/sh -c "postmap -q postmaster@localhost.localdomain ldap:/etc/postfix/ldap-aliases.cf"
   assert_success
@@ -1517,6 +1519,14 @@ load 'test_helper/bats-assert/load'
   run docker exec mail_with_ldap /bin/sh -c "sendmail -f user@external.tld some.user@localhost.localdomain < /tmp/docker-mailserver-test/email-templates/test-email.txt"
   sleep 10
   run docker exec mail_with_ldap /bin/sh -c "ls -A /var/mail/localhost.localdomain/some.user/new | wc -l"
+  assert_success
+  assert_output 1
+}
+
+@test "checking dovecot: ldap mail delivery works without uid/gid in ldif" {
+  run docker exec mail_with_ldap /bin/sh -c "sendmail -f user@external.tld some.user.without.sysuid@localhost.localdomain < /tmp/docker-mailserver-test/email-templates/test-email.txt"
+  sleep 10
+  run docker exec mail_with_ldap /bin/sh -c "ls -A /var/mail/localhost.localdomain/some.user.without.sysuid/new | wc -l"
   assert_success
   assert_output 1
 }
