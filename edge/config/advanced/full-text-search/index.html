@@ -515,36 +515,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../best-practices/dkim/" class="md-nav__link">
-        DKIM
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../best-practices/dmarc/" class="md-nav__link">
-        DMARC
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../best-practices/spf/" class="md-nav__link">
-        SPF
+      <a href="../../best-practices/dkim_dmarc_spf/" class="md-nav__link">
+        DKIM, DMARC & SPF
       </a>
     </li>
   
@@ -713,7 +685,7 @@
   
     <li class="md-nav__item">
       <a href="../../setup.sh/" class="md-nav__link">
-        Your Friend setup.sh
+        About setup.sh
       </a>
     </li>
   
@@ -938,6 +910,20 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../mail-getmail/" class="md-nav__link">
+        Email Gathering with Getmail
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -946,17 +932,17 @@
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_8_7" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_8_8" >
       
       
       
-        <label class="md-nav__link" for="__nav_4_8_7" id="__nav_4_8_7_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_8_8" id="__nav_4_8_8_label" tabindex="0">
           Email Forwarding
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_8_7_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_4_8_7">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_8_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_8_8">
           <span class="md-nav__icon md-icon"></span>
           Email Forwarding
         </label>
@@ -1586,6 +1572,19 @@
                   
 
   
+    <a href="https://github.com/docker-mailserver/docker-mailserver/edit/master/docs/content/config/advanced/full-text-search.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/docker-mailserver/docker-mailserver/raw/master/docs/content/config/advanced/full-text-search.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
+    </a>
   
 
 
@@ -1593,7 +1592,7 @@
 
 <h2 id="overview"><a class="toclink" href="#overview">Overview</a></h2>
 <p>Full-text search allows all messages to be indexed, so that mail clients can quickly and efficiently search messages by their full text content. Dovecot supports a variety of community supported <a href="https://doc.dovecot.org/configuration_manual/fts/">FTS indexing backends</a>.</p>
-<p><code>docker-mailserver</code> comes pre-installed with two plugins that can be enabled with a dovecot config file.</p>
+<p>DMS comes pre-installed with two plugins that can be enabled with a dovecot config file.</p>
 <p>Please be aware that indexing consumes memory and takes up additional disk space.</p>
 <h3 id="xapian"><a class="toclink" href="#xapian">Xapian</a></h3>
 <p>The <a href="https://github.com/grosjo/fts-xapian">dovecot-fts-xapian</a> plugin makes use of <a href="https://xapian.org/">Xapian</a>. Xapian enables embedding an FTS engine without the need for additional backends.</p>
@@ -1635,7 +1634,7 @@ service indexer-worker {
 <p>adjust the settings to tune for your desired memory limits, exclude folders and enable searching text inside of attachments</p>
 </li>
 <li>
-<p>Update <code>docker-compose.yml</code> to load the previously created dovecot plugin config file:</p>
+<p>Update <code>compose.yaml</code> to load the previously created dovecot plugin config file:</p>
 <div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">services</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">mailserver</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/docker-mailserver/docker-mailserver:latest</span>
@@ -1663,26 +1662,26 @@ service indexer-worker {
 </li>
 <li>
 <p>Recreate containers:</p>
-<div class="highlight"><pre><span></span><code>docker-compose down
-docker-compose up -d
+<div class="highlight"><pre><span></span><code>docker compose down
+docker compose up -d
 </code></pre></div>
 </li>
 <li>
 <p>Initialize indexing on all users for all mail:</p>
-<div class="highlight"><pre><span></span><code>docker-compose exec mailserver doveadm index -A -q \*
+<div class="highlight"><pre><span></span><code>docker compose exec mailserver doveadm index -A -q \*
 </code></pre></div>
 </li>
 <li>
 <p>Run the following command in a daily cron job:</p>
-<p><div class="highlight"><pre><span></span><code>docker-compose exec mailserver doveadm fts optimize -A
+<p><div class="highlight"><pre><span></span><code>docker compose exec mailserver doveadm fts optimize -A
 </code></pre></div>
-Or like the <a href="../../../faq/#how-can-i-make-spamassassin-better-recognize-spam">Spamassassin example</a> shows, you can instead use <code>cron</code> from within <code>docker-mailserver</code> to avoid potential errors if the mail-server is not running:</p>
+Or like the <a href="../../../faq/#how-can-i-make-spamassassin-better-recognize-spam">Spamassassin example</a> shows, you can instead use <code>cron</code> from within DMS to avoid potential errors if the mail server is not running:</p>
 </li>
 </ol>
 <details class="example">
 <summary>Example</summary>
 <p>Create a <em>system</em> cron file:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># in the docker-compose.yml root directory</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># in the compose.yaml root directory</span>
 mkdir<span class="w"> </span>-p<span class="w"> </span>./docker-data/dms/cron<span class="w"> </span><span class="c1"># if you didn&#39;t have this folder before</span>
 touch<span class="w"> </span>./docker-data/dms/cron/fts_xapian
 chown<span class="w"> </span>root:root<span class="w"> </span>./docker-data/dms/cron/fts_xapian
@@ -1697,7 +1696,7 @@ chmod<span class="w"> </span><span class="m">0644</span><span class="w"> </span>
 <span class="c1"># Everyday 4:00AM, optimize index files</span>
 <span class="na">0  4 * * * root  doveadm fts optimize -A</span>
 </code></pre></div>
-<p>Then with <code>docker-compose.yml</code>:</p>
+<p>Then with <code>compose.yaml</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">mailserver</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/docker-mailserver/docker-mailserver:latest</span>
@@ -1712,7 +1711,7 @@ chmod<span class="w"> </span><span class="m">0644</span><span class="w"> </span>
 <h4 id="setup_1"><a class="toclink" href="#setup_1">Setup</a></h4>
 <ol>
 <li>
-<p><code>docker-compose.yml</code>:</p>
+<p><code>compose.yaml</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">solr</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lmmdock/dovecot-solr:latest</span>
 <span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
@@ -1742,10 +1741,10 @@ chmod<span class="w"> </span><span class="m">0644</span><span class="w"> </span>
 </code></pre></div>
 </li>
 <li>
-<p>Recreate containers: <code>docker-compose down ; docker-compose up -d</code></p>
+<p>Recreate containers: <code>docker compose down ; docker compose up -d</code></p>
 </li>
 <li>
-<p>Flag all user mailbox FTS indexes as invalid, so they are rescanned on demand when they are next searched: <code>docker-compose exec mailserver doveadm fts rescan -A</code></p>
+<p>Flag all user mailbox FTS indexes as invalid, so they are rescanned on demand when they are next searched: <code>docker compose exec mailserver doveadm fts rescan -A</code></p>
 </li>
 </ol>
 <h4 id="further-discussion"><a class="toclink" href="#further-discussion">Further Discussion</a></h4>
@@ -1796,7 +1795,7 @@ chmod<span class="w"> </span><span class="m">0644</span><span class="w"> </span>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.expand", "navigation.instant", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.expand", "navigation.instant", "content.action.edit", "content.action.view", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.407015b8.min.js"></script>

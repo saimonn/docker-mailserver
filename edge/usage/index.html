@@ -534,15 +534,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#dkim-keys" class="md-nav__link">
-    DKIM Keys
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#advanced-dns-setup" class="md-nav__link">
-    Advanced DNS Setup
+  <a href="#advanced-dns-setup-dkim-dmarc-spf" class="md-nav__link">
+    Advanced DNS Setup - DKIM, DMARC &amp; SPF
   </a>
   
 </li>
@@ -668,36 +661,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/best-practices/dkim/" class="md-nav__link">
-        DKIM
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../config/best-practices/dmarc/" class="md-nav__link">
-        DMARC
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../config/best-practices/spf/" class="md-nav__link">
-        SPF
+      <a href="../config/best-practices/dkim_dmarc_spf/" class="md-nav__link">
+        DKIM, DMARC & SPF
       </a>
     </li>
   
@@ -866,7 +831,7 @@
   
     <li class="md-nav__item">
       <a href="../config/setup.sh/" class="md-nav__link">
-        Your Friend setup.sh
+        About setup.sh
       </a>
     </li>
   
@@ -1091,6 +1056,20 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../config/advanced/mail-getmail/" class="md-nav__link">
+        Email Gathering with Getmail
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -1099,17 +1078,17 @@
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_8_7" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_8_8" >
       
       
       
-        <label class="md-nav__link" for="__nav_4_8_7" id="__nav_4_8_7_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_8_8" id="__nav_4_8_8_label" tabindex="0">
           Email Forwarding
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_8_7_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_4_8_7">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_8_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_8_8">
           <span class="md-nav__icon md-icon"></span>
           Email Forwarding
         </label>
@@ -1665,15 +1644,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#dkim-keys" class="md-nav__link">
-    DKIM Keys
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#advanced-dns-setup" class="md-nav__link">
-    Advanced DNS Setup
+  <a href="#advanced-dns-setup-dkim-dmarc-spf" class="md-nav__link">
+    Advanced DNS Setup - DKIM, DMARC &amp; SPF
   </a>
   
 </li>
@@ -1712,12 +1684,25 @@
                   
 
   
+    <a href="https://github.com/docker-mailserver/docker-mailserver/edit/master/docs/content/usage.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/docker-mailserver/docker-mailserver/raw/master/docs/content/usage.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
+    </a>
   
 
 
   <h1>Usage</h1>
 
-<p>This pages explains how to get started with DMS. The guide uses Docker Compose as a reference. In our examples, a volume mounts the host location <a href="../config/advanced/optional-config/"><code>docker-data/dms/config/</code></a> to <code>/tmp/docker-mailserver/</code> inside the container.</p>
+<p>This pages explains how to get started with DMS. The guide uses Docker Compose as a reference. In our examples, a volume mounts the host location <a href="../faq/#what-about-the-docker-datadmsconfig-directory"><code>docker-data/dms/config/</code></a> to <code>/tmp/docker-mailserver/</code> inside the container.</p>
 <h2 id="preliminary-steps"><a class="toclink" href="#preliminary-steps">Preliminary Steps</a></h2>
 <p>Before you can get started with deploying your own mail server, there are some requirements to be met:</p>
 <ol>
@@ -1731,9 +1716,9 @@
 <li>The host should be able to send/receive on the <a href="../config/security/understanding-the-ports/#overview-of-email-ports">necessary ports for mail</a></li>
 <li>You should be able to set a <code>PTR</code> record for your host; security-hardened mail servers might otherwise reject your mail server as the IP address of your host does not resolve correctly/at all to the DNS name of your server.</li>
 </ol>
-<p>On the host, you should have a suitable container runtime (like <em>Docker</em> or <em>Podman</em>) installed. We assume <a href="https://docs.docker.com/compose/"><em>Docker Compose</em></a> is <a href="https://docs.docker.com/compose/install/">installed</a>.</p>
-<div class="admonition info">
-<p class="admonition-title">Podman Support</p>
+<div class="admonition note">
+<p class="admonition-title">About the Container Runtime</p>
+<p>On the host, you need to have a suitable container runtime (like <em>Docker</em> or <em>Podman</em>) installed. We assume <a href="https://docs.docker.com/compose/"><em>Docker Compose</em></a> is <a href="https://docs.docker.com/compose/install/">installed</a>. We have aligned file names and configuration conventions with the latest <a href="https://docs.docker.com/compose/compose-file/">Docker Compose (currently V2) specification</a>.</p>
 <p>If you're using podman, make sure to read the related <a href="../config/advanced/podman/">documentation</a>.</p>
 </div>
 <h3 id="minimal-dns-setup"><a class="toclink" href="#minimal-dns-setup">Minimal DNS Setup</a></h3>
@@ -1753,6 +1738,15 @@
 <li>The <strong>A record</strong> tells everyone which IP address the DNS name <code>mail.example.com</code> resolves to.</li>
 <li>The <strong>PTR record</strong> is the counterpart of the A record, telling everyone what name the IP address <code>11.22.33.44</code> resolves to.</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">About The Mail Server's Fully Qualified Domain Name</p>
+<p>The mail server's fully qualified domain name (FQDN) in our example above is <code>mail.example.com</code>. Please note though that this is more of a convention, and not due to technical restrictions. One could also run the mail server</p>
+<ol>
+<li>on <code>foo.example.com</code>: you would just need to change your <code>MX</code> record;</li>
+<li>on <code>example.com</code> directly: you would need to change your <code>MX</code> record and probably <a href="../faq/#can-i-use-a-nakedbare-domain-ie-no-hostname">read our docs on bare domain setups</a>, as these setups are called "bare domain" setups.</li>
+</ol>
+<p>The FQDN is what is relevant for TLS certificates, it has no (inherent/technical) relation to the email addresses and accounts DMS manages. That is to say: even though DMS runs on <code>mail.example.com</code>, or <code>foo.example.com</code>, or <code>example.com</code>, there is nothing that prevents it from managing mail for <code>barbaz.org</code> - <code>barbaz.org</code> will just need to set its <code>MX</code> record to <code>mail.example.com</code> (or <code>foo.example.com</code> or <code>example.com</code>).</p>
+</div>
 <p>If you setup everything, it should roughly look like this:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>dig<span class="w"> </span>@1.1.1.1<span class="w"> </span>+short<span class="w"> </span>MX<span class="w"> </span>example.com
 <span class="go">mail.example.com</span>
@@ -1789,13 +1783,13 @@
 </table>
 <h3 id="get-all-files"><a class="toclink" href="#get-all-files">Get All Files</a></h3>
 <p>Issue the following commands to acquire the necessary files:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">DMS_GITHUB_URL</span><span class="o">=</span><span class="s2">&quot;https://github.com/docker-mailserver/docker-mailserver/blob/latest&quot;</span>
-wget<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">DMS_GITHUB_URL</span><span class="si">}</span><span class="s2">/docker-compose.yml&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="nv">DMS_GITHUB_URL</span><span class="o">=</span><span class="s2">&quot;https://raw.githubusercontent.com/docker-mailserver/docker-mailserver/master&quot;</span>
+wget<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">DMS_GITHUB_URL</span><span class="si">}</span><span class="s2">/compose.yaml&quot;</span>
 wget<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">DMS_GITHUB_URL</span><span class="si">}</span><span class="s2">/mailserver.env&quot;</span>
 </code></pre></div>
 <h3 id="configuration-steps"><a class="toclink" href="#configuration-steps">Configuration Steps</a></h3>
 <ol>
-<li>First edit <code>docker-compose.yml</code> to your liking<ul>
+<li>First edit <code>compose.yaml</code> to your liking<ul>
 <li>Substitute <code>mail.example.com</code> according to your FQDN.</li>
 <li>If you want to use SELinux for the <code>./docker-data/dms/config/:/tmp/docker-mailserver/</code> mount, append <code>-z</code> or <code>-Z</code>.</li>
 </ul>
@@ -1819,7 +1813,7 @@ wget<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</s
 <p>We encourage you to directly use <code>setup</code> inside the container (like shown above). If you still want to use <code>setup.sh</code>, here's some information about it.</p>
 <p>If no DMS container is running, any <code>./setup.sh</code> command will check online for the <code>:latest</code> image tag (the current <em>stable</em> release), performing a <code>docker pull ...</code> if necessary followed by running the command in a temporary container:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>./setup.sh<span class="w"> </span><span class="nb">help</span>
-<span class="go">Image &#39;docker.io/mailserver/docker-mailserver:latest&#39; not found. Pulling ...</span>
+<span class="go">Image &#39;ghcr.io/docker-mailserver/docker-mailserver:latest&#39; not found. Pulling ...</span>
 <span class="go">SETUP(1)</span>
 
 <span class="go">NAME</span>
@@ -1842,31 +1836,10 @@ wget<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</s
 <p>You should add at least one <a href="../config/user-management/#aliases">alias</a>, the <a href="../config/environment/#postmaster_address"><em>postmaster alias</em></a>. This is a common convention, but not strictly required.</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>&lt;CONTAINER<span class="w"> </span>NAME&gt;<span class="w"> </span>setup<span class="w"> </span><span class="nb">alias</span><span class="w"> </span>add<span class="w"> </span>postmaster@example.com<span class="w"> </span>user@example.com
 </code></pre></div>
-<h3 id="dkim-keys"><a class="toclink" href="#dkim-keys">DKIM Keys</a></h3>
-<p>You can (<em>and you should</em>) generate DKIM keys. For more information:</p>
-<ul>
-<li>DKIM <a href="../config/best-practices/dkim/#enabling-dkim-signature">with OpenDKIM</a> (<em>enabled by default</em>)</li>
-<li>DKIM <a href="../config/security/rspamd/#dkim-signing">with Rspamd</a> (<em>when using <code>ENABLE_RSPAMD=1</code></em>)</li>
-</ul>
-<p>When keys are generated, you can configure your DNS server by just pasting the content of <code>config/opendkim/keys/domain.tld/mail.txt</code> to <a href="https://mxtoolbox.com/dmarc/dkim/setup/how-to-setup-dkim">set up DKIM</a>. See the <a href="../config/best-practices/dkim/#configuration-using-a-web-interface">documentation</a> for more details.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>In case you're using LDAP, the setup looks a bit different as you do not add user accounts directly. Postfix doesn't know your domain(s) and you need to provide it when configuring DKIM:</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-ti<span class="w"> </span>&lt;CONTAINER<span class="w"> </span>NAME&gt;<span class="w"> </span>setup<span class="w"> </span>config<span class="w"> </span>dkim<span class="w"> </span>domain<span class="w"> </span><span class="s1">&#39;&lt;domain.tld&gt;[,&lt;domain2.tld&gt;]&#39;</span>
-</code></pre></div>
-</div>
-<h3 id="advanced-dns-setup"><a class="toclink" href="#advanced-dns-setup">Advanced DNS Setup</a></h3>
-<p>You will very likely want to configure your DNS with these TXT records: <a href="https://www.cloudflare.com/learning/email-security/dmarc-dkim-spf/">SPF, DKIM, and DMARC</a>.</p>
-<p>The following illustrates what a (rather strict) set of records could look like:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>dig<span class="w"> </span>@1.1.1.1<span class="w"> </span>+short<span class="w"> </span>TXT<span class="w"> </span>example.com
-<span class="go">&quot;v=spf1 mx -all&quot;</span>
-<span class="gp">$ </span>dig<span class="w"> </span>@1.1.1.1<span class="w"> </span>+short<span class="w"> </span>TXT<span class="w"> </span>dkim-rsa._domainkey.example.com
-<span class="go">&quot;v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQ...&quot;</span>
-<span class="gp">$ </span>dig<span class="w"> </span>@1.1.1.1<span class="w"> </span>+short<span class="w"> </span>TXT<span class="w"> </span>_dmarc.example.com
-<span class="go">&quot;v=DMARC1; p=reject; sp=reject; pct=100; adkim=s; aspf=s; fo=1&quot;</span>
-</code></pre></div>
+<h3 id="advanced-dns-setup-dkim-dmarc-spf"><a class="toclink" href="#advanced-dns-setup-dkim-dmarc-spf">Advanced DNS Setup - DKIM, DMARC &amp; SPF</a></h3>
+<p>You will very likely want to configure your DNS with these TXT records: <a href="https://www.cloudflare.com/learning/email-security/dmarc-dkim-spf/">SPF, DKIM, and DMARC</a>. We also ship a <a href="../config/best-practices/dkim_dmarc_spf/">dedicated page in our documentation</a> about the setup of DKIM, DMARC &amp; SPF.</p>
 <h3 id="custom-user-changes-patches"><a class="toclink" href="#custom-user-changes-patches">Custom User Changes &amp; Patches</a></h3>
-<p>If you'd like to change, patch or alter files or behavior of <code>docker-mailserver</code>, you can use a script. See <a href="../faq/#how-to-adjust-settings-with-the-user-patchessh-script">this part of our documentation</a> for a detailed explanation.</p>
+<p>If you'd like to change, patch or alter files or behavior of DMS, you can use a script. See <a href="../faq/#how-to-adjust-settings-with-the-user-patchessh-script">this part of our documentation</a> for a detailed explanation.</p>
 <h2 id="testing"><a class="toclink" href="#testing">Testing</a></h2>
 <p>Here are some tools you can use to verify your configuration:</p>
 <ol>
@@ -1921,7 +1894,7 @@ wget<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</s
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "navigation.expand", "navigation.instant", "content.code.annotate"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "navigation.expand", "navigation.instant", "content.action.edit", "content.action.view", "content.code.annotate"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../assets/javascripts/bundle.407015b8.min.js"></script>

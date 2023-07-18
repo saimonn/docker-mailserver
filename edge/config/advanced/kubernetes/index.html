@@ -515,36 +515,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../best-practices/dkim/" class="md-nav__link">
-        DKIM
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../best-practices/dmarc/" class="md-nav__link">
-        DMARC
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../best-practices/spf/" class="md-nav__link">
-        SPF
+      <a href="../../best-practices/dkim_dmarc_spf/" class="md-nav__link">
+        DKIM, DMARC & SPF
       </a>
     </li>
   
@@ -713,7 +685,7 @@
   
     <li class="md-nav__item">
       <a href="../../setup.sh/" class="md-nav__link">
-        Your Friend setup.sh
+        About setup.sh
       </a>
     </li>
   
@@ -938,6 +910,20 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../mail-getmail/" class="md-nav__link">
+        Email Gathering with Getmail
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -946,17 +932,17 @@
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_8_7" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_8_8" >
       
       
       
-        <label class="md-nav__link" for="__nav_4_8_7" id="__nav_4_8_7_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_8_8" id="__nav_4_8_8_label" tabindex="0">
           Email Forwarding
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_8_7_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_4_8_7">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_8_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_8_8">
           <span class="md-nav__icon md-icon"></span>
           Email Forwarding
         </label>
@@ -1110,10 +1096,10 @@
       
         <li class="md-nav__item">
   <a href="#exposing-your-mail-server-to-the-outside-world" class="md-nav__link">
-    Exposing your Mail-Server to the Outside World
+    Exposing your Mail Server to the Outside World
   </a>
   
-    <nav class="md-nav" aria-label="Exposing your Mail-Server to the Outside World">
+    <nav class="md-nav" aria-label="Exposing your Mail Server to the Outside World">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1638,10 +1624,10 @@
       
         <li class="md-nav__item">
   <a href="#exposing-your-mail-server-to-the-outside-world" class="md-nav__link">
-    Exposing your Mail-Server to the Outside World
+    Exposing your Mail Server to the Outside World
   </a>
   
-    <nav class="md-nav" aria-label="Exposing your Mail-Server to the Outside World">
+    <nav class="md-nav" aria-label="Exposing your Mail Server to the Outside World">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1712,16 +1698,29 @@
                   
 
   
+    <a href="https://github.com/docker-mailserver/docker-mailserver/edit/master/docs/content/config/advanced/kubernetes.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/docker-mailserver/docker-mailserver/raw/master/docs/content/config/advanced/kubernetes.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
+    </a>
   
 
 
   <h1>Kubernetes</h1>
 
 <h2 id="introduction"><a class="toclink" href="#introduction">Introduction</a></h2>
-<p>This article describes how to deploy <code>docker-mailserver</code> to Kubernetes. Please note that there is also a <a href="https://github.com/docker-mailserver/docker-mailserver-helm">Helm chart</a> available.</p>
+<p>This article describes how to deploy DMS to Kubernetes. Please note that there is also a <a href="https://github.com/docker-mailserver/docker-mailserver-helm">Helm chart</a> available.</p>
 <div class="admonition attention">
 <p class="admonition-title">Requirements</p>
-<p>We assume basic knowledge about Kubernetes from the reader. Moreover, we assume the reader to have a basic understanding of mail servers. Ideally, the reader has deployed <code>docker-mailserver</code> before in an easier setup with Docker (Compose).</p>
+<p>We assume basic knowledge about Kubernetes from the reader. Moreover, we assume the reader to have a basic understanding of mail servers. Ideally, the reader has deployed DMS before in an easier setup with Docker (Compose).</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">About Support for Kubernetes</p>
@@ -1765,7 +1764,7 @@
 <span class="w">  </span><span class="nt">SSL_CERT_PATH</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/secrets/ssl/rsa/tls.crt</span>
 <span class="w">  </span><span class="nt">SSL_KEY_PATH</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/secrets/ssl/rsa/tls.key</span>
 </code></pre></div>
-<p>We can also make use of user-provided configuration files, e.g. <code>user-patches.sh</code>, <code>postfix-accounts.cf</code> and more, to adjust <code>docker-mailserver</code> to our likings. We encourage you to have a look at <a href="https://kustomize.io/">Kustomize</a> for creating <code>ConfigMap</code>s from multiple files, but for now, we will provide a simple, hand-written example. This example is absolutely minimal and only goes to show what can be done.</p>
+<p>We can also make use of user-provided configuration files, e.g. <code>user-patches.sh</code>, <code>postfix-accounts.cf</code> and more, to adjust DMS to our likings. We encourage you to have a look at <a href="https://kustomize.io/">Kustomize</a> for creating <code>ConfigMap</code>s from multiple files, but for now, we will provide a simple, hand-written example. This example is absolutely minimal and only goes to show what can be done.</p>
 <div class="highlight"><pre><span></span><code><span class="nn">---</span>
 <span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ConfigMap</span>
@@ -1841,7 +1840,7 @@
 <span class="w">      </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TCP</span>
 </code></pre></div>
 <h3 id="deployments"><a class="toclink" href="#deployments">Deployments</a></h3>
-<p>Last but not least, the <code>Deployment</code> becomes the most complex component. It instructs Kubernetes how to run the <code>docker-mailserver</code> container and how to apply your <code>ConfigMaps</code>, persisted storage, etc. Additionally, we can set options to enforce runtime security here.</p>
+<p>Last but not least, the <code>Deployment</code> becomes the most complex component. It instructs Kubernetes how to run the DMS container and how to apply your <code>ConfigMaps</code>, persisted storage, etc. Additionally, we can set options to enforce runtime security here.</p>
 <div class="highlight"><pre><span></span><code><span class="nn">---</span>
 <span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apps/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deployment</span>
@@ -1993,7 +1992,7 @@
 <span class="w">          </span><span class="nt">emptyDir</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
 </code></pre></div>
 <h3 id="certificates-an-example"><a class="toclink" href="#certificates-an-example">Certificates - An Example</a></h3>
-<p>In this example, we use <a href="https://cert-manager.io/docs/"><code>cert-manager</code></a> to supply RSA certificates. You can also supply RSA certificates as fallback certificates, which <code>docker-mailserver</code> supports out of the box with <code>SSL_ALT_CERT_PATH</code> and <code>SSL_ALT_KEY_PATH</code>, and provide ECDSA as the proper certificates.</p>
+<p>In this example, we use <a href="https://cert-manager.io/docs/"><code>cert-manager</code></a> to supply RSA certificates. You can also supply RSA certificates as fallback certificates, which DMS supports out of the box with <code>SSL_ALT_CERT_PATH</code> and <code>SSL_ALT_KEY_PATH</code>, and provide ECDSA as the proper certificates.</p>
 <div class="highlight"><pre><span></span><code><span class="nn">---</span>
 <span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cert-manager.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Certificate</span>
@@ -2023,11 +2022,11 @@
 <p>For storing OpenDKIM keys, TLS certificates or any sort of sensitive data, you should be using <code>Secret</code>s. You can mount secrets like <code>ConfigMap</code>s and use them the same way.</p>
 </div>
 <p>The <a href="../../security/ssl/">TLS docs page</a> provides guidance when it comes to certificates and transport layer security. Always provide sensitive information vai <code>Secrets</code>.</p>
-<h2 id="exposing-your-mail-server-to-the-outside-world"><a class="toclink" href="#exposing-your-mail-server-to-the-outside-world">Exposing your Mail-Server to the Outside World</a></h2>
-<p>The more difficult part with Kubernetes is to expose a deployed <code>docker-mailserver</code> to the outside world. Kubernetes provides multiple ways for doing that; each has downsides and complexity. The major problem with exposing <code>docker-mailserver</code> to outside world in Kubernetes is to <a href="https://kubernetes.io/docs/tutorials/services/source-ip">preserve the real client IP</a>. The real client IP is required by <code>docker-mailserver</code> for performing IP-based SPF checks and spam checks. If you do not require SPF checks for incoming mails, you may disable them in your <a href="../override-defaults/postfix/">Postfix configuration</a> by dropping the line that states: <code>check_policy_service unix:private/policyd-spf</code>.</p>
-<p>The easiest approach was covered above, using <code class="highlight"><span class="nt">externalTrafficPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Local</span></code>, which disables the service proxy, but makes the service local as well (which does not scale). This approach only works when you are given the correct (that is, a public and routable) IP address by a load balancer (like MetalLB). In this sense, the approach above is similar to the next example below. We want to provide you with a few alternatives too. <strong>But</strong> we also want to communicate the idea of another simple method: you could use a load-balancer without an external IP and DNAT the network traffic to the mail-server. After all, this does not interfere with SPF checks because it keeps the origin IP address. If no dedicated external IP address is available, you could try the latter approach, if one is available, use the former.</p>
+<h2 id="exposing-your-mail-server-to-the-outside-world"><a class="toclink" href="#exposing-your-mail-server-to-the-outside-world">Exposing your Mail Server to the Outside World</a></h2>
+<p>The more difficult part with Kubernetes is to expose a deployed DMS to the outside world. Kubernetes provides multiple ways for doing that; each has downsides and complexity. The major problem with exposing DMS to outside world in Kubernetes is to <a href="https://kubernetes.io/docs/tutorials/services/source-ip">preserve the real client IP</a>. The real client IP is required by DMS for performing IP-based SPF checks and spam checks. If you do not require SPF checks for incoming mails, you may disable them in your <a href="../override-defaults/postfix/">Postfix configuration</a> by dropping the line that states: <code>check_policy_service unix:private/policyd-spf</code>.</p>
+<p>The easiest approach was covered above, using <code class="highlight"><span class="nt">externalTrafficPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Local</span></code>, which disables the service proxy, but makes the service local as well (which does not scale). This approach only works when you are given the correct (that is, a public and routable) IP address by a load balancer (like MetalLB). In this sense, the approach above is similar to the next example below. We want to provide you with a few alternatives too. <strong>But</strong> we also want to communicate the idea of another simple method: you could use a load-balancer without an external IP and DNAT the network traffic to the mail server. After all, this does not interfere with SPF checks because it keeps the origin IP address. If no dedicated external IP address is available, you could try the latter approach, if one is available, use the former.</p>
 <h3 id="external-ips-service"><a class="toclink" href="#external-ips-service">External IPs Service</a></h3>
-<p>The simplest way is to expose <code>docker-mailserver</code> as a <a href="https://kubernetes.io/docs/concepts/services-networking/service">Service</a> with <a href="https://kubernetes.io/docs/concepts/services-networking/service/#external-ips">external IPs</a>. This is very similar to the approach taken above. Here, an external IP is given to the service directly by you. With the approach above, you tell your load-balancer to do this.</p>
+<p>The simplest way is to expose DMS as a <a href="https://kubernetes.io/docs/concepts/services-networking/service">Service</a> with <a href="https://kubernetes.io/docs/concepts/services-networking/service/#external-ips">external IPs</a>. This is very similar to the approach taken above. Here, an external IP is given to the service directly by you. With the approach above, you tell your load-balancer to do this.</p>
 <div class="highlight"><pre><span></span><code><span class="nn">---</span>
 <span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Service</span>
@@ -2055,13 +2054,13 @@
 <li>requires you to specify the exposed IPs explicitly.</li>
 </ul>
 <h3 id="proxy-port-to-service"><a class="toclink" href="#proxy-port-to-service">Proxy port to Service</a></h3>
-<p>The <a href="https://github.com/kubernetes/contrib/tree/master/for-demos/proxy-to-service">proxy pod</a> helps to avoid the necessity of specifying external IPs explicitly. This comes at the cost of complexity; you must deploy a proxy pod on each <a href="https://kubernetes.io/docs/concepts/architecture/nodes">Node</a> you want to expose <code>docker-mailserver</code> on.</p>
+<p>The <a href="https://github.com/kubernetes/contrib/tree/master/for-demos/proxy-to-service">proxy pod</a> helps to avoid the necessity of specifying external IPs explicitly. This comes at the cost of complexity; you must deploy a proxy pod on each <a href="https://kubernetes.io/docs/concepts/architecture/nodes">Node</a> you want to expose DMS on.</p>
 <p>This approach</p>
 <ul>
 <li>does not preserve the real client IP, so SPF check of incoming mail will fail.</li>
 </ul>
 <h3 id="bind-to-concrete-node-and-use-host-network"><a class="toclink" href="#bind-to-concrete-node-and-use-host-network">Bind to concrete Node and use host network</a></h3>
-<p>One way to preserve the real client IP is to use <code>hostPort</code> and <code>hostNetwork: true</code>. This comes at the cost of availability; you can reach <code>docker-mailserver</code> from the outside world only via IPs of <a href="https://kubernetes.io/docs/concepts/architecture/nodes">Node</a> where <code>docker-mailserver</code> is deployed.</p>
+<p>One way to preserve the real client IP is to use <code>hostPort</code> and <code>hostNetwork: true</code>. This comes at the cost of availability; you can reach DMS from the outside world only via IPs of <a href="https://kubernetes.io/docs/concepts/architecture/nodes">Node</a> where DMS is deployed.</p>
 <div class="highlight"><pre><span></span><code><span class="nn">---</span>
 <span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">extensions/v1beta1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deployment</span>
@@ -2090,11 +2089,11 @@
 </code></pre></div>
 <p>With this approach,</p>
 <ul>
-<li>it is not possible to access <code>docker-mailserver</code> via other cluster Nodes, only via the Node <code>docker-mailserver</code> was deployed at.</li>
+<li>it is not possible to access DMS via other cluster Nodes, only via the Node DMS was deployed at.</li>
 <li>every Port within the Container is exposed on the Host side.</li>
 </ul>
 <h3 id="proxy-port-to-service-via-proxy-protocol"><a class="toclink" href="#proxy-port-to-service-via-proxy-protocol">Proxy Port to Service via PROXY Protocol</a></h3>
-<p>This way is ideologically the same as <a href="#proxy-port-to-service">using a proxy pod</a>, but instead of a separate proxy pod, you configure your ingress to proxy TCP traffic to the <code>docker-mailserver</code> pod using the PROXY protocol, which preserves the real client IP.</p>
+<p>This way is ideologically the same as <a href="#proxy-port-to-service">using a proxy pod</a>, but instead of a separate proxy pod, you configure your ingress to proxy TCP traffic to the DMS pod using the PROXY protocol, which preserves the real client IP.</p>
 <h4 id="configure-your-ingress"><a class="toclink" href="#configure-your-ingress">Configure your Ingress</a></h4>
 <p>With an <a href="https://kubernetes.github.io/ingress-nginx">NGINX ingress controller</a>, set <code>externalTrafficPolicy: Local</code> for its service, and add the following to the TCP services config map (as described <a href="https://kubernetes.github.io/ingress-nginx/user-guide/exposing-tcp-udp-services">here</a>):</p>
 <div class="highlight"><pre><span></span><code><span class="nt">25</span><span class="p">:</span><span class="w">  </span><span class="s">&quot;mailserver/mailserver:25::PROXY&quot;</span>
@@ -2122,7 +2121,7 @@
 <span class="w">  </span><span class="nt">postfix-master.cf</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
 <span class="w">    </span><span class="no">smtp/inet/postscreen_upstream_proxy_protocol=haproxy</span>
 <span class="w">    </span><span class="no">submission/inet/smtpd_upstream_proxy_protocol=haproxy</span>
-<span class="w">    </span><span class="no">smtps/inet/smtpd_upstream_proxy_protocol=haproxy</span>
+<span class="w">    </span><span class="no">submissions/inet/smtpd_upstream_proxy_protocol=haproxy</span>
 <span class="w">  </span><span class="nt">dovecot.cf</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
 <span class="w">    </span><span class="no"># Assuming your ingress controller is bound to 10.0.0.0/8</span>
 <span class="w">    </span><span class="no">haproxy_trusted_networks = 10.0.0.0/8, 127.0.0.0/8</span>
@@ -2163,7 +2162,7 @@
 </details>
 <p>With this approach,</p>
 <ul>
-<li>it is not possible to access <code>docker-mailserver</code> via cluster-DNS, as the PROXY protocol is required for incoming connections.</li>
+<li>it is not possible to access DMS via cluster-DNS, as the PROXY protocol is required for incoming connections.</li>
 </ul>
 
 
@@ -2211,7 +2210,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.expand", "navigation.instant", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.expand", "navigation.instant", "content.action.edit", "content.action.view", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.407015b8.min.js"></script>

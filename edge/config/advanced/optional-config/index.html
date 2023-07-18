@@ -517,36 +517,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../best-practices/dkim/" class="md-nav__link">
-        DKIM
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../best-practices/dmarc/" class="md-nav__link">
-        DMARC
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../best-practices/spf/" class="md-nav__link">
-        SPF
+      <a href="../../best-practices/dkim_dmarc_spf/" class="md-nav__link">
+        DKIM, DMARC & SPF
       </a>
     </li>
   
@@ -715,7 +687,7 @@
   
     <li class="md-nav__item">
       <a href="../../setup.sh/" class="md-nav__link">
-        Your Friend setup.sh
+        About setup.sh
       </a>
     </li>
   
@@ -984,6 +956,20 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../mail-getmail/" class="md-nav__link">
+        Email Gathering with Getmail
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -992,17 +978,17 @@
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_8_7" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_8_8" >
       
       
       
-        <label class="md-nav__link" for="__nav_4_8_7" id="__nav_4_8_7_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_8_8" id="__nav_4_8_8_label" tabindex="0">
           Email Forwarding
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_8_7_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_4_8_7">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_8_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_8_8">
           <span class="md-nav__icon md-icon"></span>
           Email Forwarding
         </label>
@@ -1498,18 +1484,32 @@
                   
 
   
+    <a href="https://github.com/docker-mailserver/docker-mailserver/edit/master/docs/content/config/advanced/optional-config.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/docker-mailserver/docker-mailserver/raw/master/docs/content/config/advanced/optional-config.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
+    </a>
   
 
 
   <h1>Optional Configuration</h1>
 
-<p>This is a list of all configuration files and directories which are optional or automatically generated in your <code>docker-data/dms/config/</code> directory.</p>
+<p>This is a list of all configuration files and directories which are optional or automatically generated in your <a href="../../../faq/#what-about-the-docker-datadmsconfig-directory"><code>docker-data/dms/config/</code></a> directory.</p>
 <h2 id="directories"><a class="toclink" href="#directories">Directories</a></h2>
 <ul>
 <li><strong>sieve-filter:</strong> directory for sieve filter scripts. (Docs: <a href="../mail-sieve/">Sieve</a>)</li>
 <li><strong>sieve-pipe:</strong> directory for sieve pipe scripts. (Docs: <a href="../mail-sieve/">Sieve</a>)</li>
-<li><strong>opendkim:</strong> DKIM directory. Auto-configurable via <a href="../../setup.sh/"><code>setup.sh config dkim</code></a>. (Docs: <a href="../../best-practices/dkim/">DKIM</a>)</li>
+<li><strong>opendkim:</strong> DKIM directory. Auto-configurable via <a href="../../setup.sh/"><code>setup.sh config dkim</code></a>. (Docs: <a href="../../best-practices/dkim_dmarc_spf/#dkim">DKIM</a>)</li>
 <li><strong>ssl:</strong> SSL Certificate directory if <code>SSL_TYPE</code> is set to <code>self-signed</code> or <code>custom</code>. (Docs: <a href="../../security/ssl/">SSL</a>)</li>
+<li><strong>Rspamd:</strong> Override directory for custom settings when using Rspamd (Docs: <a href="../../security/rspamd/#manually">Rspamd</a>)</li>
 </ul>
 <h2 id="files"><a class="toclink" href="#files">Files</a></h2>
 <ul>
@@ -1537,7 +1537,7 @@
 <li><strong>dovecot.cf:</strong> replaces <code>/etc/dovecot/local.conf</code>. (Docs: <a href="../override-defaults/dovecot/">Override Dovecot Defaults</a>)</li>
 <li><strong>dovecot-quotas.cf:</strong> list of custom quotas per mailbox. (Docs: <a href="../../user-management/#quotas">Accounts</a>)</li>
 <li><strong>user-patches.sh:</strong> this file will be run after all configuration files are set up, but before the postfix, amavis and other daemons are started. (Docs: <a href="../../../faq/#how-to-adjust-settings-with-the-user-patchessh-script">FAQ - How to adjust settings with the <code>user-patches.sh</code> script</a>)</li>
-<li><strong>rspamd-commands:</strong> list of simple commands to adjust Rspamd modules in an easy way (Docs: <a href="../../security/rspamd/#with-the-help-of-a-custom-file">Rspamd</a>)</li>
+<li><strong>rspamd/custom-commands.conf:</strong> list of simple commands to adjust Rspamd modules in an easy way (Docs: <a href="../../security/rspamd/#with-the-help-of-a-custom-file">Rspamd</a>)</li>
 </ul>
 
 
@@ -1587,7 +1587,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.expand", "navigation.instant", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.expand", "navigation.instant", "content.action.edit", "content.action.view", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.407015b8.min.js"></script>

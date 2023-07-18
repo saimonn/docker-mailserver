@@ -595,36 +595,8 @@
   
   
     <li class="md-nav__item">
-      <a href="config/best-practices/dkim/" class="md-nav__link">
-        DKIM
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="config/best-practices/dmarc/" class="md-nav__link">
-        DMARC
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="config/best-practices/spf/" class="md-nav__link">
-        SPF
+      <a href="config/best-practices/dkim_dmarc_spf/" class="md-nav__link">
+        DKIM, DMARC & SPF
       </a>
     </li>
   
@@ -793,7 +765,7 @@
   
     <li class="md-nav__item">
       <a href="config/setup.sh/" class="md-nav__link">
-        Your Friend setup.sh
+        About setup.sh
       </a>
     </li>
   
@@ -1018,6 +990,20 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="config/advanced/mail-getmail/" class="md-nav__link">
+        Email Gathering with Getmail
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -1026,17 +1012,17 @@
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_8_7" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_8_8" >
       
       
       
-        <label class="md-nav__link" for="__nav_4_8_7" id="__nav_4_8_7_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_8_8" id="__nav_4_8_8_label" tabindex="0">
           Email Forwarding
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_8_7_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_4_8_7">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_8_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_8_8">
           <span class="md-nav__icon md-icon"></span>
           Email Forwarding
         </label>
@@ -1566,6 +1552,19 @@
                   
 
   
+    <a href="https://github.com/docker-mailserver/docker-mailserver/edit/master/docs/content/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/docker-mailserver/docker-mailserver/raw/master/docs/content/index.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
+    </a>
   
 
 
@@ -1582,10 +1581,10 @@
 <p>If you're completely new to mail servers or you want to read up on them, check out our <a href="./introduction/"><em>Introduction</em> page</a>. If you're new to DMS as a mail server appliance, make sure to read the <a href="./usage/"><em>Usage</em> chapter</a> first. If you want to look at examples for Docker Compose, we have an <a href="./examples/tutorials/basic-installation/"><em>Examples</em> page</a>.</p>
 <p>There is also a script - <a href="https://github.com/docker-mailserver/docker-mailserver/blob/master/setup.sh"><code>setup.sh</code></a> - supplied with this project. It supports you in configuring and administrating your server. Information on how to get it and how to use it is available <a href="config/setup.sh/">on a dedicated page</a>.</p>
 <h3 id="configuration"><a class="toclink" href="#configuration">Configuration</a></h3>
-<p>We have a <a href="config/environment/">dedicated configuration page</a>. It contains most of the configuration and explanation you need to setup <em>your</em> mail server properly. Be aware that advanced tasks may still require reading through all parts of this documentation; it may also involve inspecting your running container for debugging purposes. After all, a mail-server is a complex arrangement of various programs.</p>
+<p>We have a <a href="config/environment/">dedicated configuration page</a>. It contains most of the configuration and explanation you need to setup <em>your</em> mail server properly. Be aware that advanced tasks may still require reading through all parts of this documentation; it may also involve inspecting your running container for debugging purposes. After all, a mail server is a complex arrangement of various programs.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>If you'd like to change, patch or alter files or behavior of <code>docker-mailserver</code>, you can use a script. Just place a script called <code>user-patches.sh</code> in your <code>./docker-data/dms/config/</code> folder volume (which is mounted to <code>/tmp/docker-mailserver/</code> inside the container) and it will be run on container startup. See the <a href="faq/#how-to-adjust-settings-with-the-user-patchessh-script">'Modifications via Script' page</a> for additional documentation and an example.</p>
+<p>If you'd like to change, patch or alter files or behavior of DMS, you can use a script. Just place a script called <code>user-patches.sh</code> in your <code>./docker-data/dms/config/</code> folder volume (which is mounted to <code>/tmp/docker-mailserver/</code> inside the container) and it will be run on container startup. See the <a href="faq/#how-to-adjust-settings-with-the-user-patchessh-script">'Modifications via Script' page</a> for additional documentation and an example.</p>
 </div>
 <p>You might also want to check out:</p>
 <ol>
@@ -1647,7 +1646,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.top", "navigation.expand", "navigation.instant", "content.code.annotate"], "search": "assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.top", "navigation.expand", "navigation.instant", "content.action.edit", "content.action.view", "content.code.annotate"], "search": "assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="assets/javascripts/bundle.407015b8.min.js"></script>

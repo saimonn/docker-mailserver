@@ -515,36 +515,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../best-practices/dkim/" class="md-nav__link">
-        DKIM
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../best-practices/dmarc/" class="md-nav__link">
-        DMARC
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../best-practices/spf/" class="md-nav__link">
-        SPF
+      <a href="../../best-practices/dkim_dmarc_spf/" class="md-nav__link">
+        DKIM, DMARC & SPF
       </a>
     </li>
   
@@ -880,7 +852,7 @@
   
     <li class="md-nav__item">
       <a href="../../setup.sh/" class="md-nav__link">
-        Your Friend setup.sh
+        About setup.sh
       </a>
     </li>
   
@@ -1105,6 +1077,20 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../advanced/mail-getmail/" class="md-nav__link">
+        Email Gathering with Getmail
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -1113,17 +1099,17 @@
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_8_7" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_8_8" >
       
       
       
-        <label class="md-nav__link" for="__nav_4_8_7" id="__nav_4_8_7_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_8_8" id="__nav_4_8_8_label" tabindex="0">
           Email Forwarding
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_8_7_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_4_8_7">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_8_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_8_8">
           <span class="md-nav__icon md-icon"></span>
           Email Forwarding
         </label>
@@ -1740,6 +1726,19 @@
                   
 
   
+    <a href="https://github.com/docker-mailserver/docker-mailserver/edit/master/docs/content/config/security/ssl.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/docker-mailserver/docker-mailserver/raw/master/docs/content/config/security/ssl.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
+    </a>
   
 
 
@@ -1765,12 +1764,12 @@
 <p>You could use a <a href="https://en.wikipedia.org/wiki/Wildcard_certificate#Examples">wildcard certificate</a>. This avoids accidentally leaking information to the internet, but keep in mind the <a href="https://gist.github.com/joepie91/7e5cad8c0726fd6a5e90360a754fc568">potential security risks</a> of wildcard certs.</p>
 </div>
 <h2 id="the-fqdn"><a class="toclink" href="#the-fqdn">The FQDN</a></h2>
-<p>An <a href="https://en.wikipedia.org/wiki/Fully_qualified_domain_name">FQDN</a> (<em>Fully Qualified Domain Name</em>) such as <code>mail.example.com</code> is required for <code>docker-mailserver</code> to function correctly, especially for looking up the correct SSL certificate to use.</p>
+<p>An <a href="https://en.wikipedia.org/wiki/Fully_qualified_domain_name">FQDN</a> (<em>Fully Qualified Domain Name</em>) such as <code>mail.example.com</code> is required for DMS to function correctly, especially for looking up the correct SSL certificate to use.</p>
 <ul>
 <li><code>mail.example.com</code> will still use <code>user@example.com</code> as the mail address. You do not need a bare domain for that.</li>
-<li>We usually discourage assigning a bare domain (<em>When your DNS MX record does not point to a subdomain</em>) to represent <code>docker-mailserver</code>. However, an FQDN of <a href="../../../faq/#can-i-use-a-nakedbare-domain-ie-no-hostname">just <code>example.com</code> is also supported</a>.</li>
+<li>We usually discourage assigning a bare domain (<em>When your DNS MX record does not point to a subdomain</em>) to represent DMS. However, an FQDN of <a href="../../../faq/#can-i-use-a-nakedbare-domain-ie-no-hostname">just <code>example.com</code> is also supported</a>.</li>
 <li>Internally, <code>hostname -f</code> will be used to retrieve the FQDN as configured in the below examples.</li>
-<li>Wildcard certificates (eg: <code>*.example.com</code>) are supported for <code>SSL_TYPE=letsencrypt</code>. Your configured FQDN below may be <code>mail.example.com</code>, and your wildcard certificate provisioned to <code>/etc/letsencrypt/live/example.com</code> which will be checked as a fallback FQDN by <code>docker-mailserver</code>.</li>
+<li>Wildcard certificates (eg: <code>*.example.com</code>) are supported for <code>SSL_TYPE=letsencrypt</code>. Your configured FQDN below may be <code>mail.example.com</code>, and your wildcard certificate provisioned to <code>/etc/letsencrypt/live/example.com</code> which will be checked as a fallback FQDN by DMS.</li>
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Setting the hostname correctly</p>
@@ -1779,7 +1778,7 @@
 docker<span class="w"> </span>run<span class="w"> </span>--hostname<span class="w"> </span>mail.example.com
 </code></pre></div>
 <p>or</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># docker-compose.yml</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># compose.yaml</span>
 <span class="nt">services</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">mailserver</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mail.example.com</span>
@@ -1787,11 +1786,11 @@ docker<span class="w"> </span>run<span class="w"> </span>--hostname<span class="
 </div>
 <h2 id="provisioning-methods"><a class="toclink" href="#provisioning-methods">Provisioning methods</a></h2>
 <h3 id="lets-encrypt-recommended"><a class="toclink" href="#lets-encrypt-recommended">Let's Encrypt (Recommended)</a></h3>
-<p>To enable <em>Let's Encrypt</em> for <code>docker-mailserver</code>, you have to:</p>
+<p>To enable <em>Let's Encrypt</em> for DMS, you have to:</p>
 <ol>
 <li>Get your certificate using the <em>Let's Encrypt</em> client <a href="https://github.com/certbot/certbot">Certbot</a>.</li>
 <li>
-<p>For your <code>docker-mailserver</code> container:</p>
+<p>For your DMS container:</p>
 <ul>
 <li>Add the environment variable <code>SSL_TYPE=letsencrypt</code>.</li>
 <li>Mount <a href="https://certbot.eff.org/docs/using.html#where-are-my-certificates">your local <code>letsencrypt</code> folder</a> as a volume to <code>/etc/letsencrypt</code>.</li>
@@ -1802,11 +1801,11 @@ docker<span class="w"> </span>run<span class="w"> </span>--hostname<span class="
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><code>/etc/letsencrypt/live</code> stores provisioned certificates in individual folders named by their FQDN.</p>
-<p>Make sure that the entire folder is mounted to <code>docker-mailserver</code> as there are typically symlinks from <code>/etc/letsencrypt/live/mail.example.com</code> to <code>/etc/letsencrypt/archive</code>.</p>
+<p>Make sure that the entire folder is mounted to DMS as there are typically symlinks from <code>/etc/letsencrypt/live/mail.example.com</code> to <code>/etc/letsencrypt/archive</code>.</p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>Add these additions to the <code>mailserver</code> service in your <a href="https://github.com/docker-mailserver/docker-mailserver/blob/master/docker-compose.yml"><code>docker-compose.yml</code></a>:</p>
+<p>Add these additions to the <code>mailserver</code> service in your <a href="https://github.com/docker-mailserver/docker-mailserver/blob/master/compose.yaml"><code>compose.yaml</code></a>:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">mailserver</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mail.example.com</span>
@@ -1817,7 +1816,7 @@ docker<span class="w"> </span>run<span class="w"> </span>--hostname<span class="
 </code></pre></div>
 </div>
 <h4 id="example-using-docker-for-lets-encrypt"><a class="toclink" href="#example-using-docker-for-lets-encrypt">Example using Docker for <em>Let's Encrypt</em></a></h4>
-<p>Certbot provisions certificates to <code>/etc/letsencrypt</code>. Add a volume to store these, so that they can later be accessed by <code>docker-mailserver</code> container. You may also want to persist Certbot <a href="https://certbot.eff.org/docs/using.html#log-rotation">logs</a>, just in case you need to troubleshoot.</p>
+<p>Certbot provisions certificates to <code>/etc/letsencrypt</code>. Add a volume to store these, so that they can later be accessed by DMS container. You may also want to persist Certbot <a href="https://certbot.eff.org/docs/using.html#log-rotation">logs</a>, just in case you need to troubleshoot.</p>
 <ol>
 <li>
 <p>Getting a certificate is this simple! (<em>Referencing: <a href="https://certbot.eff.org/docs/install.html#running-with-docker">Certbot docker instructions</a> and <a href="https://certbot.eff.org/docs/using.html#standalone"><code>certonly --standalone</code> mode</a></em>):</p>
@@ -1830,10 +1829,10 @@ docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </
 </code></pre></div>
 </li>
 <li>
-<p>Add a volume for <code>docker-mailserver</code> that maps the <em>local <code>certbot/certs/</code> folder</em> to the container path <code>/etc/letsencrypt/</code>.</p>
+<p>Add a volume for DMS that maps the <em>local <code>certbot/certs/</code> folder</em> to the container path <code>/etc/letsencrypt/</code>.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>Add these additions to the <code>mailserver</code> service in your <a href="https://github.com/docker-mailserver/docker-mailserver/blob/master/docker-compose.yml"><code>docker-compose.yml</code></a>:</p>
+<p>Add these additions to the <code>mailserver</code> service in your <a href="https://github.com/docker-mailserver/docker-mailserver/blob/master/compose.yaml"><code>compose.yaml</code></a>:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">mailserver</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mail.example.com</span>
@@ -1890,14 +1889,14 @@ docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </
 </li>
 <li>Store the file in a folder if you like, such as <code>docker-data/certbot/secrets/</code>.</li>
 <li>
-<p>Your <code>docker-compose.yml</code> should include the following:</p>
+<p>Your <code>compose.yaml</code> should include the following:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">mailserver</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">environments</span><span class="p">:</span>
 <span class="w">      </span><span class="c1"># Set SSL certificate type.</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SSL_TYPE=letsencrypt</span>
 <span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
-<span class="w">      </span><span class="c1"># Mount the cert folder generated by Certbot into mail-server:</span>
+<span class="w">      </span><span class="c1"># Mount the cert folder generated by Certbot:</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./docker-data/certbot/certs/:/etc/letsencrypt/:ro</span>
 
 <span class="w">  </span><span class="nt">certbot-cloudflare</span><span class="p">:</span>
@@ -1927,7 +1926,7 @@ docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </
 </li>
 <li>
 <p>Run the service to provision a certificate:</p>
-<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>run<span class="w"> </span>certbot-cloudflare
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>run<span class="w"> </span>certbot-cloudflare
 </code></pre></div>
 </li>
 <li>
@@ -1948,7 +1947,7 @@ docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </
 <details class="tip">
 <summary>Renewing a certificate (Optional)</summary>
 <p>We've only demonstrated how to provision a certificate, but it will expire in 90 days and need to be renewed before then.</p>
-<p>In the following example, add a new service (<code>certbot-cloudflare-renew</code>) into <code>docker-compose.yml</code> that will handle certificate renewals:</p>
+<p>In the following example, add a new service (<code>certbot-cloudflare-renew</code>) into <code>compose.yaml</code> that will handle certificate renewals:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">certbot-cloudflare-renew</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">certbot/dns-cloudflare:latest</span>
@@ -1960,7 +1959,7 @@ docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cloudflare-api-token</span>
 </code></pre></div>
 <p>You can manually run this service to renew the cert within 90 days:</p>
-<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>run<span class="w"> </span>certbot-cloudflare-renew
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>run<span class="w"> </span>certbot-cloudflare-renew
 </code></pre></div>
 <p>You should see the following output
 (The following log was generated with <code>--dry-run</code> options)</p>
@@ -1980,12 +1979,12 @@ docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </
 </code></pre></div>
 <p>It is recommended to automate this renewal via a task scheduler like a <em>systemd timer</em> or in <code>crontab</code>
 (<code>crontab</code> example: Checks every day if the certificate should be renewed)</p>
-<div class="highlight"><pre><span></span><code><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>docker-compose<span class="w"> </span>-f<span class="w"> </span>PATH_TO_YOUR_DOCKER_COMPOSE_YML<span class="w"> </span>up<span class="w"> </span>certbot-cloudflare-renew
+<div class="highlight"><pre><span></span><code><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>-f<span class="w"> </span>PATH_TO_YOUR_DOCKER_COMPOSE_YML<span class="w"> </span>up<span class="w"> </span>certbot-cloudflare-renew
 </code></pre></div>
 </details>
 <h4 id="example-using-nginx-proxy-and-acme-companion-with-docker"><a class="toclink" href="#example-using-nginx-proxy-and-acme-companion-with-docker">Example using <code>nginx-proxy</code> and <code>acme-companion</code> with Docker</a></h4>
 <p>If you are running a web server already, port 80 will be in use which Certbot requires. You could use the <a href="https://certbot.eff.org/docs/using.html#webroot">Certbot <code>--webroot</code></a> feature, but it is more common to leverage a <em>reverse proxy</em> that manages the provisioning and renewal of certificates for your services automatically.</p>
-<p>In the following example, we show how <code>docker-mailserver</code> can be run alongside the docker containers <a href="https://github.com/nginx-proxy/nginx-proxy"><code>nginx-proxy</code></a> and <a href="https://github.com/nginx-proxy/acme-companion"><code>acme-companion</code></a> (<em>Referencing: <a href="https://github.com/nginx-proxy/acme-companion/blob/main/docs"><code>acme-companion</code> documentation</a></em>):</p>
+<p>In the following example, we show how DMS can be run alongside the docker containers <a href="https://github.com/nginx-proxy/nginx-proxy"><code>nginx-proxy</code></a> and <a href="https://github.com/nginx-proxy/acme-companion"><code>acme-companion</code></a> (<em>Referencing: <a href="https://github.com/nginx-proxy/acme-companion/blob/main/docs"><code>acme-companion</code> documentation</a></em>):</p>
 <ol>
 <li>
 <p>Start the <em>reverse proxy</em> (<code>nginx-proxy</code>):</p>
@@ -2019,7 +2018,7 @@ docker<span class="w"> </span>run<span class="w"> </span>--detach<span class="w"
 <p>Start the rest of your web server containers as usual.</p>
 </li>
 <li>
-<p>Start a <em>dummy container</em> to provision certificates for your FQDN (eg: <code>mail.example.com</code>). <code>acme-companion</code> will detect the container and generate a <em>Let's Encrypt</em> certificate for your domain, which can be used by <code>docker-mailserver</code>:</p>
+<p>Start a <em>dummy container</em> to provision certificates for your FQDN (eg: <code>mail.example.com</code>). <code>acme-companion</code> will detect the container and generate a <em>Let's Encrypt</em> certificate for your domain, which can be used by DMS:</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>--detach<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--name<span class="w"> </span>webmail<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--env<span class="w"> </span><span class="s1">&#39;VIRTUAL_HOST=mail.example.com&#39;</span><span class="w"> </span><span class="se">\</span>
@@ -2030,7 +2029,7 @@ docker<span class="w"> </span>run<span class="w"> </span>--detach<span class="w"
 <p>You may want to add <code>--env LETSENCRYPT_TEST=true</code> to the above while testing, to avoid the <em>Let's Encrypt</em> certificate generation rate limits.</p>
 </li>
 <li>
-<p>Make sure your mount path to the <code>letsencrypt</code> certificates directory is correct. Edit your <code>docker-compose.yml</code> for the <code>mailserver</code> service to have volumes added like below:</p>
+<p>Make sure your mount path to the <code>letsencrypt</code> certificates directory is correct. Edit your <code>compose.yaml</code> for the <code>mailserver</code> service to have volumes added like below:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./docker-data/dms/mail-data/:/var/mail/</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./docker-data/dms/mail-state/:/var/mail-state/</span>
@@ -2039,14 +2038,14 @@ docker<span class="w"> </span>run<span class="w"> </span>--detach<span class="w"
 </code></pre></div>
 </li>
 <li>
-<p>Then from the <code>docker-compose.yml</code> project directory, run: <code>docker-compose up -d mailserver</code>.</p>
+<p>Then from the <code>compose.yaml</code> project directory, run: <code>docker compose up -d mailserver</code>.</p>
 </li>
 </ol>
 <h4 id="example-using-nginx-proxy-and-acme-companion-with-docker-compose"><a class="toclink" href="#example-using-nginx-proxy-and-acme-companion-with-docker-compose">Example using <code>nginx-proxy</code> and <code>acme-companion</code> with <code>docker-compose</code></a></h4>
-<p>The following example is the <a href="https://github.com/nginx-proxy/acme-companion#basic-usage-with-the-nginx-proxy-container">basic setup</a> you need for using <code>nginx-proxy</code> and <code>acme-companion</code> with <code>docker-mailserver</code> (<em>Referencing: <a href="https://github.com/nginx-proxy/acme-companion/blob/main/docs"><code>acme-companion</code> documentation</a></em>):</p>
+<p>The following example is the <a href="https://github.com/nginx-proxy/acme-companion#basic-usage-with-the-nginx-proxy-container">basic setup</a> you need for using <code>nginx-proxy</code> and <code>acme-companion</code> with DMS (<em>Referencing: <a href="https://github.com/nginx-proxy/acme-companion/blob/main/docs"><code>acme-companion</code> documentation</a></em>):</p>
 <details class="example" open="open">
-<summary>Example: <code>docker-compose.yml</code></summary>
-<p>You should have an existing <code>docker-compose.yml</code> with a <code>mailserver</code> service. Below are the modifications to add for integrating with <code>nginx-proxy</code> and <code>acme-companion</code> services:</p>
+<summary>Example: <code>compose.yaml</code></summary>
+<p>You should have an existing <code>compose.yaml</code> with a <code>mailserver</code> service. Below are the modifications to add for integrating with <code>nginx-proxy</code> and <code>acme-companion</code> services:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Add the following `environment` and `volumes` to your existing `mailserver` service:</span>
 <span class="w">  </span><span class="nt">mailserver</span><span class="p">:</span>
@@ -2084,7 +2083,7 @@ docker<span class="w"> </span>run<span class="w"> </span>--detach<span class="w"
 <span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx-proxy-acme</span>
 <span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
 <span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
-<span class="w">      </span><span class="c1"># Only docker-compose v2 supports: `volumes_from: [nginx-proxy]`,</span>
+<span class="w">      </span><span class="c1"># When `volumes_from: [nginx-proxy]` is not supported,</span>
 <span class="w">      </span><span class="c1"># reference the _reverse-proxy_ `container_name` here:</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NGINX_PROXY_CONTAINER=nginx-proxy</span>
 <span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
@@ -2111,7 +2110,7 @@ docker<span class="w"> </span>run<span class="w"> </span>--detach<span class="w"
 </ul>
 <p><a href="https://github.com/nginx-proxy/acme-companion/blob/main/docs/Container-configuration.md"><code>acme-companion</code> ENV for default settings</a> that apply to all containers using <code>LETSENCRYPT_HOST</code>:</p>
 <ul>
-<li><code>DEFAULT_EMAIL</code>: An email address that the CA (<em>eg: Let's Encrypt</em>) can contact you about expiring certificates, failed renewals, or for account recovery. You may want to use an email address not handled by your mail-server to ensure deliverability in the event your mail-server breaks.</li>
+<li><code>DEFAULT_EMAIL</code>: An email address that the CA (<em>eg: Let's Encrypt</em>) can contact you about expiring certificates, failed renewals, or for account recovery. You may want to use an email address not handled by your mail server to ensure deliverability in the event your mail server breaks.</li>
 <li><code>CERTS_UPDATE_INTERVAL</code>: If you need to adjust the frequency to check for renewals. 3600 seconds (1 hour) by default.</li>
 <li><code>DEBUG=1</code>: Should be helpful when <a href="https://github.com/nginx-proxy/acme-companion/blob/main/docs/Invalid-authorizations.md">troubleshooting provisioning issues</a> from <code>acme-companion</code> logs.</li>
 <li><code>ACME_CA_URI</code>: Useful in combination with <code>CA_BUNDLE</code> to use a private CA. To change the default <em>Let's Encrypt</em> endpoint to the staging endpoint, use <code>https://acme-staging-v02.api.letsencrypt.org/directory</code>.</li>
@@ -2151,8 +2150,8 @@ docker<span class="w"> </span>run<span class="w"> </span>--detach<span class="w"
 </div>
 <h4 id="example-using-lets-encrypt-certificates-with-a-synology-nas"><a class="toclink" href="#example-using-lets-encrypt-certificates-with-a-synology-nas">Example using <em>Let's Encrypt</em> Certificates with a <em>Synology NAS</em></a></h4>
 <p>Version 6.2 and later of the Synology NAS DSM OS now come with an interface to generate and renew letencrypt certificates. Navigation into your DSM control panel and go to Security, then click on the tab Certificate to generate and manage letsencrypt certificates.</p>
-<p>Amongst other things, you can use these to secure your mail-server. DSM locates the generated certificates in a folder below <code>/usr/syno/etc/certificate/_archive/</code>.</p>
-<p>Navigate to that folder and note the 6 character random folder name of the certificate you'd like to use. Then, add the following to your <code>docker-compose.yml</code> declaration file:</p>
+<p>Amongst other things, you can use these to secure your mail server. DSM locates the generated certificates in a folder below <code>/usr/syno/etc/certificate/_archive/</code>.</p>
+<p>Navigate to that folder and note the 6 character random folder name of the certificate you'd like to use. Then, add the following to your <code>compose.yaml</code> declaration file:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/usr/syno/etc/certificate/_archive/&lt;your-folder&gt;/:/tmp/dms/custom-certs/</span>
 <span class="nt">environment</span><span class="p">:</span>
@@ -2248,7 +2247,7 @@ docker<span class="w"> </span>run<span class="w"> </span>--detach<span class="w"
 <p><a href="https://github.com/containous/traefik">Traefik</a> is an open-source application proxy using the <a href="https://datatracker.ietf.org/doc/html/rfc8555">ACME protocol</a>. <a href="https://github.com/containous/traefik">Traefik</a> can request certificates for domains and subdomains, and it will take care of renewals, challenge negotiations, etc. We strongly recommend to use <a href="https://github.com/containous/traefik">Traefik</a>'s major version 2.</p>
 <p><a href="https://github.com/containous/traefik">Traefik</a>'s storage format is natively supported if the <code>acme.json</code> store is mounted into the container at <code>/etc/letsencrypt/acme.json</code>. The file is also monitored for changes and will trigger a reload of the mail services (Postfix and Dovecot).</p>
 <p>Wildcard certificates are supported. If your FQDN is <code>mail.example.com</code> and your wildcard certificate is <code>*.example.com</code>, add the ENV: <code class="highlight"><span class="nv">SSL_DOMAIN</span><span class="o">=</span>example.com</code>.</p>
-<p>The mail-server will select it's certificate from <code>acme.json</code> checking these ENV for a matching FQDN (<em>in order of priority</em>):</p>
+<p>DMS will select it's certificate from <code>acme.json</code> checking these ENV for a matching FQDN (<em>in order of priority</em>):</p>
 <ol>
 <li><code class="highlight"><span class="si">${</span><span class="nv">SSL_DOMAIN</span><span class="si">}</span></code></li>
 <li><code class="highlight"><span class="si">${</span><span class="nv">HOSTNAME</span><span class="si">}</span></code></li>
@@ -2308,10 +2307,10 @@ docker<span class="w"> </span>run<span class="w"> </span>--detach<span class="w"
 <li><code>&lt;FQDN&gt;-cert.pem</code></li>
 <li><code>demoCA/cacert.pem</code></li>
 </ul>
-<p>Where <code>&lt;FQDN&gt;</code> is the FQDN you've configured for your <code>docker-mailserver</code> container.</p>
-<p>Add <code>SSL_TYPE=self-signed</code> to your <code>docker-mailserver</code> environment variables. Postfix and Dovecot will be configured to use the provided certificate (<em><code>.pem</code> files above</em>) during container startup.</p>
+<p>Where <code>&lt;FQDN&gt;</code> is the FQDN you've configured for your DMS container.</p>
+<p>Add <code>SSL_TYPE=self-signed</code> to your DMS environment variables. Postfix and Dovecot will be configured to use the provided certificate (<em><code>.pem</code> files above</em>) during container startup.</p>
 <h4 id="generating-a-self-signed-certificate"><a class="toclink" href="#generating-a-self-signed-certificate">Generating a self-signed certificate</a></h4>
-<p>One way to generate self-signed certificates is with <a href="https://smallstep.com/docs/step-cli">Smallstep's <code>step</code> CLI</a>. This is exactly what <a href="https://github.com/docker-mailserver/docker-mailserver/blob/3b8059f2daca80d967635e04d8d81e9abb755a4d/test/test-files/ssl/example.test/README.md"><code>docker-mailserver</code> does for creating test certificates</a>.</p>
+<p>One way to generate self-signed certificates is with <a href="https://smallstep.com/docs/step-cli">Smallstep's <code>step</code> CLI</a>. This is exactly what <a href="https://github.com/docker-mailserver/docker-mailserver/blob/3b8059f2daca80d967635e04d8d81e9abb755a4d/test/test-files/ssl/example.test/README.md">DMS does for creating test certificates</a>.</p>
 <p>For example with the FQDN <code>mail.example.test</code>, you can generate the required files by running:</p>
 <div class="highlight"><pre><span></span><code><span class="ch">#! /bin/sh</span>
 mkdir<span class="w"> </span>-p<span class="w"> </span>demoCA
@@ -2347,7 +2346,7 @@ docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </
 <span class="w">  </span>smallstep/step-ca
 </code></pre></div>
 <h3 id="bring-your-own-certificates"><a class="toclink" href="#bring-your-own-certificates">Bring Your Own Certificates</a></h3>
-<p>You can also provide your own certificate files. Add these entries to your <code>docker-compose.yml</code>:</p>
+<p>You can also provide your own certificate files. Add these entries to your <code>compose.yaml</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./docker-data/dms/custom-certs/:/tmp/dms/custom-certs/:ro</span>
 <span class="nt">environment</span><span class="p">:</span>
@@ -2361,7 +2360,7 @@ docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </
 <p><code>SSL_ALT_CERT_PATH</code> and <code>SSL_ALT_KEY_PATH</code> are additional ENV vars to support a 2nd certificate as a fallback. Commonly known as hybrid or dual certificate support. This is useful for using a modern ECDSA as your primary certificate, and RSA as your fallback for older connections. They work in the same manner as the non-<code>ALT</code> versions.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>You may have to restart <code>docker-mailserver</code> once the certificates change.</p>
+<p>You may have to restart DMS once the certificates change.</p>
 </div>
 <h2 id="testing-a-certificate-is-valid"><a class="toclink" href="#testing-a-certificate-is-valid">Testing a Certificate is Valid</a></h2>
 <ul>
@@ -2501,7 +2500,7 @@ openssl<span class="w"> </span>s_client<span class="w"> </span><span class="se">
 <span class="k">fi</span>
 </code></pre></div>
 <h2 id="custom-dh-parameters"><a class="toclink" href="#custom-dh-parameters">Custom DH Parameters</a></h2>
-<p>By default <code>docker-mailserver</code> uses <a href="https://github.com/internetstandards/dhe_groups"><code>ffdhe4096</code></a> from <a href="https://datatracker.ietf.org/doc/html/rfc7919">IETF RFC 7919</a>. These are standardized pre-defined DH groups and the only available DH groups for TLS 1.3. It is <a href="https://crypto.stackexchange.com/questions/29926/what-diffie-hellman-parameters-should-i-use">discouraged to generate your own DH parameters</a> as it is often less secure.</p>
+<p>By default DMS uses <a href="https://github.com/internetstandards/dhe_groups"><code>ffdhe4096</code></a> from <a href="https://datatracker.ietf.org/doc/html/rfc7919">IETF RFC 7919</a>. These are standardized pre-defined DH groups and the only available DH groups for TLS 1.3. It is <a href="https://crypto.stackexchange.com/questions/29926/what-diffie-hellman-parameters-should-i-use">discouraged to generate your own DH parameters</a> as it is often less secure.</p>
 <p>Despite this, if you must use non-standard DH parameters or you would like to swap <code>ffdhe4096</code> for a different group (eg <code>ffdhe2048</code>); Add your own PEM encoded DH params file via a volume to <code>/tmp/docker-mailserver/dhparams.pem</code>. This will replace DH params for both Dovecot and Postfix services during container startup.</p>
 
 
@@ -2549,7 +2548,7 @@ openssl<span class="w"> </span>s_client<span class="w"> </span><span class="se">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.expand", "navigation.instant", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.expand", "navigation.instant", "content.action.edit", "content.action.view", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.407015b8.min.js"></script>
