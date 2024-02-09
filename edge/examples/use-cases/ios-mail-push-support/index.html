@@ -12,13 +12,13 @@
         <meta name="author" content="docker-mailserver (Github Organization)">
       
       
-        <link rel="canonical" href="https://docker-mailserver.github.io/docker-mailserver/edge/config/best-practices/dkim_dmarc_spf/">
+        <link rel="canonical" href="https://docker-mailserver.github.io/docker-mailserver/edge/examples/use-cases/ios-mail-push-support/">
       
       
-        <link rel="prev" href="../autodiscover/">
+        <link rel="prev" href="../imap-folders/">
       
       
-        <link rel="next" href="../mta-sts/">
+        <link rel="next" href="../auth-lua/">
       
       
       <link rel="icon" href="../../../assets/logo/favicon-32x32.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>DKIM, DMARC & SPF - Docker Mailserver</title>
+        <title>Advanced | iOS Mail Push Support - Docker Mailserver</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dkim-dmarc-spf" class="md-skip">
+        <a href="#introduction" class="md-skip">
           Skip to content
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              DKIM, DMARC & SPF
+              Advanced | iOS Mail Push Support
             
           </span>
         </div>
@@ -273,13 +273,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../environment/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../config/environment/" class="md-tabs__link">
           
   
   Configuration
@@ -293,17 +291,21 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../examples/tutorials/basic-installation/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../tutorials/basic-installation/" class="md-tabs__link">
           
   
   Examples
@@ -494,8 +496,6 @@
       
   
   
-    
-  
   
   
     
@@ -506,12 +506,14 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
@@ -525,7 +527,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Configuration
@@ -539,7 +541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../environment/" class="md-nav__link">
+      <a href="../../../config/environment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -560,7 +562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-management/" class="md-nav__link">
+      <a href="../../../config/user-management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -578,21 +580,21 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3" >
         
           
           <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
@@ -606,7 +608,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_3">
             <span class="md-nav__icon md-icon"></span>
             Best Practices
@@ -620,7 +622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autodiscover/" class="md-nav__link">
+      <a href="../../../config/best-practices/autodiscover/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -638,30 +640,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    DKIM, DMARC & SPF
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../config/best-practices/dkim_dmarc_spf/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -670,110 +652,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#dkim" class="md-nav__link">
-    <span class="md-ellipsis">
-      DKIM
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="DKIM">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#generating-keys" class="md-nav__link">
-    <span class="md-ellipsis">
-      Generating Keys
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dkim-dns" class="md-nav__link">
-    <span class="md-ellipsis">
-      DNS Record
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dkim-debug" class="md-nav__link">
-    <span class="md-ellipsis">
-      Troubleshooting
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dmarc" class="md-nav__link">
-    <span class="md-ellipsis">
-      DMARC
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#spf" class="md-nav__link">
-    <span class="md-ellipsis">
-      SPF
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="SPF">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#adding-an-spf-record" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adding an SPF Record
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#backup-mx-secondary-mx-for-policyd-spf" class="md-nav__link">
-    <span class="md-ellipsis">
-      Backup MX &amp; Secondary MX for policyd-spf
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -786,7 +664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mta-sts/" class="md-nav__link">
+      <a href="../../../config/best-practices/mta-sts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -854,7 +732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/understanding-the-ports/" class="md-nav__link">
+      <a href="../../../config/security/understanding-the-ports/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -875,7 +753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/ssl/" class="md-nav__link">
+      <a href="../../../config/security/ssl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -896,7 +774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/fail2ban/" class="md-nav__link">
+      <a href="../../../config/security/fail2ban/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -917,7 +795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/mail_crypt/" class="md-nav__link">
+      <a href="../../../config/security/mail_crypt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -938,7 +816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/rspamd/" class="md-nav__link">
+      <a href="../../../config/security/rspamd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -967,7 +845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../debugging/" class="md-nav__link">
+      <a href="../../../config/debugging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -988,7 +866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pop3/" class="md-nav__link">
+      <a href="../../../config/pop3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1009,7 +887,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup.sh/" class="md-nav__link">
+      <a href="../../../config/setup.sh/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1069,7 +947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advanced/optional-config/" class="md-nav__link">
+      <a href="../../../config/advanced/optional-config/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1129,7 +1007,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advanced/maintenance/update-and-cleanup/" class="md-nav__link">
+      <a href="../../../config/advanced/maintenance/update-and-cleanup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1197,7 +1075,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advanced/override-defaults/dovecot/" class="md-nav__link">
+      <a href="../../../config/advanced/override-defaults/dovecot/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1218,7 +1096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advanced/override-defaults/postfix/" class="md-nav__link">
+      <a href="../../../config/advanced/override-defaults/postfix/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1239,7 +1117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advanced/override-defaults/user-patches/" class="md-nav__link">
+      <a href="../../../config/advanced/override-defaults/user-patches/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1268,7 +1146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advanced/auth-ldap/" class="md-nav__link">
+      <a href="../../../config/advanced/auth-ldap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1289,7 +1167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advanced/auth-oauth2/" class="md-nav__link">
+      <a href="../../../config/advanced/auth-oauth2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1310,7 +1188,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advanced/mail-sieve/" class="md-nav__link">
+      <a href="../../../config/advanced/mail-sieve/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1331,7 +1209,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advanced/mail-fetchmail/" class="md-nav__link">
+      <a href="../../../config/advanced/mail-fetchmail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1352,7 +1230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advanced/mail-getmail/" class="md-nav__link">
+      <a href="../../../config/advanced/mail-getmail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1412,7 +1290,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advanced/mail-forwarding/relay-hosts/" class="md-nav__link">
+      <a href="../../../config/advanced/mail-forwarding/relay-hosts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1433,7 +1311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advanced/mail-forwarding/aws-ses/" class="md-nav__link">
+      <a href="../../../config/advanced/mail-forwarding/aws-ses/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1462,7 +1340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advanced/full-text-search/" class="md-nav__link">
+      <a href="../../../config/advanced/full-text-search/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1483,7 +1361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advanced/kubernetes/" class="md-nav__link">
+      <a href="../../../config/advanced/kubernetes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1504,7 +1382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advanced/ipv6/" class="md-nav__link">
+      <a href="../../../config/advanced/ipv6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1525,7 +1403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advanced/podman/" class="md-nav__link">
+      <a href="../../../config/advanced/podman/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1546,7 +1424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advanced/dovecot-master-accounts/" class="md-nav__link">
+      <a href="../../../config/advanced/dovecot-master-accounts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1579,8 +1457,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -1589,14 +1469,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
@@ -1610,7 +1488,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Examples
@@ -1663,7 +1541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/tutorials/basic-installation/" class="md-nav__link">
+      <a href="../../tutorials/basic-installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1684,7 +1562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/tutorials/mailserver-behind-proxy/" class="md-nav__link">
+      <a href="../../tutorials/mailserver-behind-proxy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1705,7 +1583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/tutorials/crowdsec/" class="md-nav__link">
+      <a href="../../tutorials/crowdsec/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1726,7 +1604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/tutorials/docker-build/" class="md-nav__link">
+      <a href="../../tutorials/docker-build/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1747,7 +1625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/tutorials/blog-posts/" class="md-nav__link">
+      <a href="../../tutorials/blog-posts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1773,21 +1651,21 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
         
           
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
@@ -1801,7 +1679,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_2">
             <span class="md-nav__icon md-icon"></span>
             Use Cases
@@ -1815,7 +1693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/use-cases/forward-only-mailserver-with-ldap-authentication/" class="md-nav__link">
+      <a href="../forward-only-mailserver-with-ldap-authentication/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1836,7 +1714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/use-cases/imap-folders/" class="md-nav__link">
+      <a href="../imap-folders/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1854,10 +1732,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../examples/use-cases/ios-mail-push-support/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    iOS Mail Push Support
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1866,6 +1762,78 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#privacy-concerns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Privacy concerns
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-configuration-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other configuration options
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1878,7 +1846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/use-cases/auth-lua/" class="md-nav__link">
+      <a href="../auth-lua/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1899,7 +1867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/use-cases/bind-smtp-network-interface/" class="md-nav__link">
+      <a href="../bind-smtp-network-interface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2117,8 +2085,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2127,86 +2093,56 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dkim" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      DKIM
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="DKIM">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#generating-keys" class="md-nav__link">
-    <span class="md-ellipsis">
-      Generating Keys
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dkim-dns" class="md-nav__link">
-    <span class="md-ellipsis">
-      DNS Record
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dkim-debug" class="md-nav__link">
-    <span class="md-ellipsis">
-      Troubleshooting
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dmarc" class="md-nav__link">
-    <span class="md-ellipsis">
-      DMARC
+      Introduction
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#spf" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      SPF
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="SPF">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#adding-an-spf-record" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adding an SPF Record
+      Prerequisites
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#backup-mx-secondary-mx-for-policyd-spf" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
     <span class="md-ellipsis">
-      Backup MX &amp; Secondary MX for policyd-spf
+      Limitations
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#privacy-concerns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Privacy concerns
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-configuration-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other configuration options
+    </span>
+  </a>
   
 </li>
       
@@ -2225,7 +2161,7 @@
                   
 
   
-    <a href="https://github.com/docker-mailserver/docker-mailserver/edit/master/docs/content/config/best-practices/dkim_dmarc_spf.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/docker-mailserver/docker-mailserver/edit/master/docs/content/examples/use-cases/ios-mail-push-support.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -2234,308 +2170,246 @@
     
       
     
-    <a href="https://github.com/docker-mailserver/docker-mailserver/raw/master/docs/content/config/best-practices/dkim_dmarc_spf.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/docker-mailserver/docker-mailserver/raw/master/docs/content/examples/use-cases/ios-mail-push-support.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
   
 
 
-<h1 id="dkim-dmarc-spf"><a class="toclink" href="#dkim-dmarc-spf">DKIM, DMARC &amp; SPF</a></h1>
-<p>Cloudflare has written an <a href="https://www.cloudflare.com/learning/email-security/dmarc-dkim-spf/">article about DKIM, DMARC and SPF</a> that we highly recommend you to read to get acquainted with the topic.</p>
-<div class="admonition note">
-<p class="admonition-title">Rspamd vs Individual validators</p>
-<p>With v12.0.0, Rspamd was integrated into DMS. It can perform validations for DKIM, DMARC and SPF as part of the <code>spam-score-calculation</code> for an email. DMS provides individual alternatives for each validation that can be used instead of deferring to Rspamd:</p>
+  <h1>iOS Mail Push Support</h1>
+
+<h2 id="introduction"><a class="toclink" href="#introduction">Introduction</a></h2>
+<p>iOS Mail currently does not support the IMAP idle extension. Therefore users can only either check manually or configure intervals for fetching mails in their mail account preferences when using the default configuration.</p>
+<p>To support mail push Dovecot needs to advertise the <code>XAPPLEPUSHSERVICE</code> IMAP extension as well as sending the actual push notifications to the Apple Push Notification service (APNs) which will forward them to the device.</p>
+<p>This can be done with two components:</p>
 <ul>
-<li>DKIM: <code>opendkim</code> is used as a milter (like Rspamd)</li>
-<li>DMARC: <code>opendmarc</code> is used as a milter (like Rspamd)</li>
-<li>SPF: <code>policyd-spf</code> is used in Postfix's <code>smtpd_recipient_restrictions</code></li>
+<li>A Dovecot plugin (<code>dovecot-xaps-plugin</code>) which is triggered whenever a mail is created or moved from/to a mail folder.</li>
+<li>A daemon service (<code>dovecot-xaps-daemon</code>) that manages both the device registrations as well as sending notifications to the APNs.</li>
 </ul>
-<p>In a future release Rspamd will become the default for these validations, with a deprecation notice issued prior to the removal of the above alternatives.</p>
-<p>We encourage everyone to prefer Rspamd via <code>ENABLE_RSPAMD=1</code>.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">DNS Caches &amp; Propagation</p>
-<p>While modern DNS providers are quick, it may take minutes or even hours for new DNS records to become available / propagate.</p>
-</div>
-<h2 id="dkim"><a class="toclink" href="#dkim">DKIM</a></h2>
-<div class="admonition quote">
-<p class="admonition-title">What is DKIM</p>
-<p>DomainKeys Identified Mail (DKIM) is an email authentication method designed to detect forged sender addresses in email (email spoofing), a technique often used in phishing and email spam.</p>
-<p><a href="https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail">Source</a></p>
-</div>
-<p>When DKIM is enabled:</p>
+<h2 id="prerequisites"><a class="toclink" href="#prerequisites">Prerequisites</a></h2>
+<ul>
+<li>An Apple developer account to create the required Apple Push Notification service certificate.</li>
+<li>Knowledge creating Docker images, using the command-line, and creating shell scripts.</li>
+</ul>
+<h2 id="limitations"><a class="toclink" href="#limitations">Limitations</a></h2>
+<ul>
+<li>You need to maintain a custom <code>docker-mailserver</code> image.</li>
+<li>Push support is limited to the INBOX folder. Changes to other folders will not be pushed to the device regardless of the configuration settings.</li>
+<li>You currently cannot use the same account UUID on multiple devices. This means that if you use the same backup on multiple devices (e.g. old phone / new phone) only one of them will get the notification. Use different backups or recreate the mail account.</li>
+</ul>
+<h2 id="privacy-concerns"><a class="toclink" href="#privacy-concerns">Privacy concerns</a></h2>
+<ul>
+<li>The service does not send any part of the actual message to Apple.</li>
+<li>The information sent contains the device UUID to notify and the (on-device) account UUID which was generated by the iOS mail application when creating the account.</li>
+<li>Upon receiving the notification, the iOS mail application will connect to the IMAP server given by the provided account UUID and fetch the mail to notify the user.</li>
+<li>Apple therefore does not know the mail address for which the mail was received, only that a specific account on a specific device should be notified that a new mail or that a mail was moved to the INBOX folder.</li>
+</ul>
+<h2 id="installation"><a class="toclink" href="#installation">Installation</a></h2>
+<p>Both components will be built using Docker and included into a custom <code>docker-mailserver</code> image. Afterwards the required configuration is added to <code>docker-data/dms/config</code>. The registration data is stored in <code>/var/mail-state/lib-xapsd</code>.</p>
 <ol>
-<li>Inbound mail will verify any included DKIM signatures</li>
-<li>Outbound mail is signed (<em>when you're sending domain has a configured DKIM key</em>)</li>
+<li>
+<p>Create a Dockerfile to build a <code>docker-mailserver</code> image that includes the <a href="https://github.com/freswa/dovecot-xaps-plugin"><code>dovecot-xaps-plugin</code></a> as well as the <a href="https://github.com/freswa/dovecot-xaps-daemon"><code>dovecot-xaps-daemon</code></a>. This is required to ensure that the Dovecot plugin is built against the same Dovecot version. The <code>:edge</code> tag is used here, but you might want to use a released version instead.</p>
+<div class="highlight"><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">mailserver/docker-mailserver:edge</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s">dovecot-plugin-xaps</span>
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/tmp/dovecot-xaps-plugin</span>
+<span class="k">RUN</span><span class="w"> </span>&lt;&lt;EOF
+<span class="w">    </span>apt-get<span class="w"> </span>update
+<span class="w">    </span>apt-get<span class="w"> </span>-y<span class="w"> </span>--no-install-recommends<span class="w"> </span>install<span class="w"> </span>git<span class="w"> </span>cmake<span class="w"> </span>make<span class="w"> </span>build-essential<span class="w"> </span>dovecot-dev
+<span class="w">    </span>git<span class="w"> </span>clone<span class="w"> </span>--single-branch<span class="w"> </span>--depth<span class="o">=</span><span class="m">1</span><span class="w"> </span>https://github.com/freswa/dovecot-xaps-plugin.git<span class="w"> </span>.
+<span class="w">    </span>mkdir<span class="w"> </span>build<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>build
+<span class="w">    </span>cmake<span class="w"> </span>..<span class="w"> </span>-DCMAKE_BUILD_TYPE<span class="o">=</span>Release
+<span class="w">    </span>make<span class="w"> </span>install
+EOF
+
+<span class="c"># Use an older Go version as Go &gt;= 1.20 causes this issue: https://github.com/freswa/dovecot-xaps-daemon/issues/24#issuecomment-1483876081</span>
+<span class="c"># Note that the underlying issue are non-standard-compliant Apple http servers which might get fixed at some point</span>
+<span class="k">FROM</span><span class="w"> </span><span class="s">golang:1.19-alpine</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s">dovecot-xaps-daemon</span>
+<span class="k">ENV</span><span class="w"> </span><span class="nv">GOPROXY</span><span class="o">=</span>https://proxy.golang.org,direct
+<span class="k">ENV</span><span class="w"> </span><span class="nv">CGO_ENABLED</span><span class="o">=</span><span class="m">0</span>
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/go/dovecot-xaps-daemon</span>
+<span class="k">RUN</span><span class="w"> </span>&lt;&lt;EOF
+<span class="w">    </span>apk<span class="w"> </span>add<span class="w"> </span>--no-cache<span class="w"> </span>--virtual<span class="w"> </span>build-dependencies<span class="w"> </span>git
+<span class="w">    </span>git<span class="w"> </span>clone<span class="w"> </span>--single-branch<span class="w"> </span>--depth<span class="o">=</span><span class="m">1</span><span class="w"> </span>https://github.com/freswa/dovecot-xaps-daemon<span class="w"> </span>.
+<span class="w">    </span>go<span class="w"> </span>build<span class="w"> </span>./cmd/xapsd
+EOF
+
+<span class="k">FROM</span><span class="w"> </span><span class="s">mailserver/docker-mailserver:edge</span>
+<span class="k">COPY</span><span class="w"> </span>--from<span class="o">=</span>dovecot-plugin-xaps<span class="w"> </span>/usr/lib/dovecot/modules/*_xaps_*<span class="w"> </span>/usr/lib/dovecot/modules/
+<span class="k">COPY</span><span class="w"> </span>--from<span class="o">=</span>dovecot-xaps-daemon<span class="w"> </span>/go/dovecot-xaps-daemon/xapsd<span class="w"> </span>/usr/bin/xapsd
+
+<span class="c"># create a non-root user for the daemon process as well as configuration and run state directories</span>
+<span class="k">RUN</span><span class="w"> </span>&lt;&lt;EOF
+<span class="w">    </span>adduser<span class="w"> </span>--quiet<span class="w"> </span>--system<span class="w"> </span>--group<span class="w"> </span>--disabled-password<span class="w"> </span>--home<span class="w"> </span>/var/mail-state/lib-xapsd<span class="w"> </span>--no-create-home<span class="w"> </span>xapsd
+<span class="w">    </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/var/run/xapsd<span class="w"> </span>/etc/xapsd
+EOF
+</code></pre></div>
+</li>
+<li>
+<p>Build the new image:
+    <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>yourname/docker-mailserver<span class="w"> </span>.
+</code></pre></div></p>
+</li>
+<li>
+<p>Modify your <code>compose.yaml</code> to use the newly created image:
+    <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">services</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">mailserver</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yourname/docker-mailserver:latest</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Recreate the container:
+    <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>down
+docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+</code></pre></div></p>
+</li>
+<li>
+<p>Create a hash of your Apple developer account password using the provided <code>xapsd -pass</code> command:
+    <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>mailserver<span class="w"> </span>xapsd<span class="w"> </span>-pass
+</code></pre></div></p>
+</li>
+<li>
+<p>Add configuration for both components:</p>
+<ul>
+<li>
+<p>Create a folder named <code>xaps</code> in <code>docker-data/dms/config</code>.</p>
+</li>
+<li>
+<p>Create a file named <code>xapsd.yaml</code> in <code>docker-data/dms/config/xaps</code>. </p>
+<ul>
+<li>Replace <code>appleId</code> and <code>appleIdHashedPassword</code> with your actual credentials. For reference see also <a href="https://github.com/freswa/dovecot-xaps-daemon/blob/master/configs/xapsd/xapsd.yaml">here</a>.</li>
+<li>The service will use the provided username/hash combination to automatically request a new certificate from Apple as well as renewing an older certificate if needed.</li>
+</ul>
+<div class="highlight"><span class="filename">xapsd.yaml</span><pre><span></span><code><span class="c1"># set the loglevel to either</span>
+<span class="c1"># trace, debug, error, fatal, info, panic or warn</span>
+<span class="c1"># Default: info</span>
+<span class="nt">loglevel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">info</span>
+
+<span class="c1"># xapsd creates a json file to store the registration persistent on disk.</span>
+<span class="c1"># This sets the location of the file.</span>
+<span class="nt">databaseFile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/mail-state/lib-xapsd/database.json</span>
+
+<span class="c1"># xapsd listens on a socket for http/https requests from the dovecot plugin.</span>
+<span class="c1"># This sets the address and port number of the listen socket.</span>
+<span class="nt">listenAddr</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;127.0.0.1&#39;</span>
+<span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">11619</span>
+
+<span class="c1"># xapsd is able to listen on a HTTPS Socket to allow HTTP/2 to be used</span>
+<span class="c1"># SSL is enabled implicitly when certfile and keyfile exist</span>
+<span class="c1"># !!! only use HTTPS for connection pooling with a proxy e.g. nginx or HaProxy</span>
+<span class="c1"># !!! direct usage with the plugin is discouraged and unsupported</span>
+<span class="nt">tlsCertfile</span><span class="p">:</span>
+<span class="nt">tlsKeyfile</span><span class="p">:</span>
+<span class="nt">tlsListenAddr</span><span class="p">:</span>
+<span class="nt">tlsPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">11620</span>
+
+<span class="c1"># Notifications that are not initiated by new messages are not sent immediately for two reasons:</span>
+<span class="c1"># 1. When you move/copy/delete messages you most likely move/copy/delete more messages within a short period of time.</span>
+<span class="c1"># 2. You don&#39;t need your mailboxes to synchronize immediately since they are automatically synchronized when opening</span>
+<span class="c1">#    the app</span>
+<span class="c1"># If a new message comes and the move/copy/delete notification is still on hold it will be sent with the notification</span>
+<span class="c1"># for the new message.</span>
+<span class="c1"># This sets the interval to check for delayed messages.</span>
+<span class="nt">checkInterval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+
+<span class="c1"># Set the time how long notifications for not-new messages should be delayed until they are sent.</span>
+<span class="c1"># Whenever checkInterval runs, it checks if &quot;delay&quot; &lt;= &quot;waiting time&quot; and sends the notification if the expression is</span>
+<span class="c1"># true.</span>
+<span class="nt">delay</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+
+<span class="c1"># To retrieve certificates from Apple, we need to login with a valid Apple ID</span>
+<span class="c1"># The accounts email must be given in cleartext, but the password has to</span>
+<span class="c1"># be hashed before sending it. To not leak working credentials on running servers,</span>
+<span class="c1"># we do not accept the cleartext password here.</span>
+<span class="nt">appleId</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo@example.com</span>
+
+<span class="c1"># use `xaps -pass` to calculate the hash of the apple id password</span>
+<span class="nt">appleIdHashedPassword</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bar</span>
+</code></pre></div>
+</li>
+<li>
+<p>Create a file named <code>95-xaps.conf</code> in <code>docker-data/dms/config/xaps</code>. For reference see also <a href="https://github.com/freswa/dovecot-xaps-plugin/blob/master/xaps.conf">here</a>.
+    <div class="highlight"><span class="filename">95-xaps.conf</span><pre><span></span><code>protocol imap {
+  mail_plugins = $mail_plugins notify push_notification xaps_push_notification xaps_imap
+}
+
+protocol lda {
+  mail_plugins = $mail_plugins notify push_notification xaps_push_notification
+}
+
+protocol lmtp {
+  mail_plugins = $mail_plugins notify push_notification xaps_push_notification
+}
+
+plugin {
+    # xaps_config contains xaps specific configuration parameters
+    # url:              protocol, hostname and port under which xapsd listens
+    # user_lookup: Use if you want to determine the username used for PNs from environment variables provided by
+    #                   login mechanism. Value is variable name to look up.
+    # max_retries:      maximum num of retries the http client connects to the xaps daemon
+    # timeout_msecs     http timeout of the http connection
+    xaps_config = url=http://127.0.0.1:11619 user_lookup=theattribute max_retries=6 timeout_msecs=5000
+    push_notification_driver = xaps
+}
+</code></pre></div></p>
+</li>
+<li>
+<p>Create a supervisord file named <code>xapsd.conf</code> in <code>docker-data/dms/config/xaps</code> with the following content:
+    <div class="highlight"><span class="filename">xapsd.conf</span><pre><span></span><code>[program:xapsd]
+startsecs=0
+autostart=false
+autorestart=true
+stdout_logfile=/var/log/supervisor/%(program_name)s.log
+stderr_logfile=/var/log/supervisor/%(program_name)s.log
+user=xapsd
+command=/usr/bin/xapsd
+pidfile=/var/run/xapsd/xapsd.pid
+</code></pre></div></p>
+</li>
+<li>
+<p>Create or update your <code>user-patches.sh</code> in <code>docker-data/dms/config</code> to move the files to their final location as well as starting the daemon service:
+    <div class="highlight"><span class="filename">user-patches.sh</span><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Copy the configs to internal locations:</span>
+cp<span class="w"> </span>/tmp/docker-mailserver/xaps/95-xaps.conf<span class="w"> </span>/etc/dovecot/conf.d/95-xaps.conf
+cp<span class="w"> </span>/tmp/docker-mailserver/xaps/xapsd.yaml<span class="w"> </span>/etc/xapsd/xapsd.yaml
+cp<span class="w"> </span>/tmp/docker-mailserver/xaps/xapsd.conf<span class="w"> </span>/etc/supervisor/conf.d/xapsd.conf
+
+<span class="c1"># Setup data persistence and ensure ownership is always for xapsd:</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>/var/mail-state/lib-xapsd
+chown<span class="w"> </span>-R<span class="w"> </span>xapsd:xapsd<span class="w"> </span>/var/mail-state/lib-xapsd
+
+<span class="c1"># Start the xaps daemon:</span>
+supervisorctl<span class="w"> </span>update
+supervisorctl<span class="w"> </span>start<span class="w"> </span>xapsd
+</code></pre></div></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Recreate the container again to apply the new configuration:
+    <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>down
+docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+</code></pre></div></p>
+</li>
+<li>
+<p>Recreate your mail account on your iOS device and check the logs in <code>/var/log/supervisor/dovecot.log</code> and <code>/var/log/supervisor/xapsd.log</code> for any errors.</p>
+</li>
 </ol>
-<p>DKIM requires a public/private key pair to enable <strong>signing (<em>via private key</em>)</strong> your outgoing mail, while the receiving end must query DNS to <strong>verify (<em>via public key</em>)</strong> that the signature is trustworthy.</p>
-<h3 id="generating-keys"><a class="toclink" href="#generating-keys">Generating Keys</a></h3>
-<p>You'll need to repeat this process if you add any new domains.</p>
-<p>You should have:</p>
-<ul>
-<li>At least one <a href="../../user-management/#adding-a-new-account">email account setup</a></li>
-<li>Attached a <a href="../../advanced/optional-config/#volumes-config">volume for config</a> to persist the generated files to local storage</li>
-</ul>
-<div class="admonition example">
-<p class="admonition-title">Creating DKIM Keys</p>
-<p>DKIM keys can be generated with good defaults by running:</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>&lt;CONTAINER<span class="w"> </span>NAME&gt;<span class="w"> </span>setup<span class="w"> </span>config<span class="w"> </span>dkim
+<h2 id="other-configuration-options"><a class="toclink" href="#other-configuration-options">Other configuration options</a></h2>
+<p>Both device registration and notifications send a username to the daemon to lookup the device. While the registration and other IMAP operations in Dovecot will send the Dovecot username, LMTP will send the provided authentication username.</p>
+<p>The format of that username is specified by the <code>auth_username_format</code> Dovecot setting. If you are not using mail addresses as Dovecot usernames - e.g. when using LDAP - you can either change the <code>auth_username_format</code> or add the mail address as property to the user account and use the lookup feature (see below).</p>
+<div class="highlight"><span class="filename">user-patches.sh</span><pre><span></span><code>sed<span class="w"> </span>-i<span class="w"> </span>-r<span class="w"> </span><span class="s2">&quot;s|^#?(auth_username_format =).*|\1 %Ln|&quot;</span><span class="w"> </span>/etc/dovecot/conf.d/10-auth.conf
 </code></pre></div>
-<p>If you need to generate your keys with different settings, check the <code>help</code> output for supported config options and examples:</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>&lt;CONTAINER<span class="w"> </span>NAME&gt;<span class="w"> </span>setup<span class="w"> </span>config<span class="w"> </span>dkim<span class="w"> </span><span class="nb">help</span>
-</code></pre></div>
-<p>As described by the help output, you may need to use the <code>domain</code> option explicitly when you're using LDAP or Rspamd.</p>
-</div>
-<details class="info">
-<summary>Changing the key size</summary>
-<p>The keypair generated for using with DKIM presently defaults to RSA-2048. This is a good size but you can lower the security to <code>1024-bit</code>, or increase it to <code>4096-bit</code> (<em>discouraged as that is excessive</em>).</p>
-<p>To generate a key with different size (<em>for RSA 1024-bit</em>) run:</p>
-<div class="highlight"><pre><span></span><code>setup<span class="w"> </span>config<span class="w"> </span>dkim<span class="w"> </span>keysize<span class="w"> </span><span class="m">1024</span>
-</code></pre></div>
-<div class="admonition warning">
-<p class="admonition-title">RSA Key Sizes &gt;= 4096 Bit</p>
-<p>According to <a href="https://datatracker.ietf.org/doc/html/rfc8301#section-3.2">RFC 8301</a>, keys are preferably between 1024 and 2048 bits. Keys of size 4096-bit or larger may not be compatible to all systems your mail is intended for.</p>
-<p>You <a href="https://github.com/docker-mailserver/docker-mailserver/issues/1854#issuecomment-806280929">should not need a key length beyond 2048-bit</a>. If 2048-bit does not meet your security needs, you may want to instead consider adopting key rotation or switching from RSA to ECC keys for DKIM.</p>
-</div>
-</details>
-<details class="note">
-<summary>You may need to specify mail domains explicitly</summary>
-<p>Required when using LDAP and Rspamd.</p>
-<p><code>setup config dkim</code> will generate DKIM keys for what is assumed as the primary mail domain (<em>derived from the FQDN assigned to DMS, minus any subdomain</em>).</p>
-<p>When the DMS FQDN is <code>mail.example.com</code> or <code>example.com</code>, by default this command will generate DKIM keys for <code>example.com</code> as the primary domain for your users mail accounts (eg: <code>hello@example.com</code>).</p>
-<p>The DKIM generation does not have support to query LDAP for additional mail domains it should know about. If the primary mail domain is not sufficient, then you must explicitly specify any extra domains via the <code>domain</code> option:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># ENABLE_OPENDKIM=1 (default):</span>
-setup<span class="w"> </span>config<span class="w"> </span>dkim<span class="w"> </span>domain<span class="w"> </span><span class="s1">&#39;example.com,another-example.com&#39;</span>
-
-<span class="c1"># ENABLE_RSPAMD=1 + ENABLE_OPENDKIM=0:</span>
-setup<span class="w"> </span>config<span class="w"> </span>dkim<span class="w"> </span>domain<span class="w"> </span>example.com
-setup<span class="w"> </span>config<span class="w"> </span>dkim<span class="w"> </span>domain<span class="w"> </span>another-example.com
-</code></pre></div>
-<div class="admonition info">
-<p class="admonition-title">OpenDKIM with <code>ACCOUNT_PROVISIONER=FILE</code></p>
-<p>When DMS uses this configuration, it will by default also detect mail domains (<em>from accounts added via <code>setup email add</code></em>), generating additional DKIM keys.</p>
-</div>
-</details>
-<p>DKIM is currently supported by either OpenDKIM or Rspamd:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">OpenDKIM</label><label for="__tabbed_1_2">Rspamd</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>OpenDKIM is currently <a href="../../environment/#enable_opendkim">enabled by default</a>.</p>
-<p>After running <code>setup config dkim</code>, your new DKIM key files (<em>and OpenDKIM config</em>) have been added to <code>/tmp/docker-mailserver/opendkim/</code>.</p>
-<div class="admonition info">
-<p class="admonition-title">Restart required</p>
-<p>After restarting DMS, outgoing mail will now be signed with your new DKIM key(s) <img alt="🎉" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f389.svg" title=":tada:" /></p>
-</div>
-</div>
-<div class="tabbed-block">
-<p>Requires opt-in via <a href="../../environment/#enable_rspamd"><code>ENABLE_RSPAMD=1</code></a> (<em>and disable the default OpenDKIM: <code>ENABLE_OPENDKIM=0</code></em>).</p>
-<p>Rspamd provides DKIM support through two separate modules:</p>
-<ol>
-<li><a href="https://www.rspamd.com/doc/modules/dkim.html">Verifying DKIM signatures from inbound mail</a> is enabled by default.</li>
-<li><a href="https://www.rspamd.com/doc/modules/dkim_signing.html">Signing outbound mail with your DKIM key</a> needs additional setup (key + dns + config).</li>
-</ol>
-<details class="warning">
-<summary>Using Multiple Domains</summary>
-<p>If you have multiple domains, you need to:</p>
-<ul>
-<li>Create a key wth <code>docker exec -it &lt;CONTAINER NAME&gt; setup config dkim domain &lt;DOMAIN&gt;</code> for each domain DMS should sign outgoing mail for.</li>
-<li>Provide a custom <code>dkim_signing.conf</code> (for which an example is shown below), as the default config only supports one domain.</li>
-</ul>
-</details>
-<div class="admonition info">
-<p class="admonition-title">About the Helper Script</p>
-<p>The script will persist the keys in <code>/tmp/docker-mailserver/rspamd/dkim/</code>. Hence, if you are already using the default volume mounts, the keys are persisted in a volume. The script also restarts Rspamd directly, so changes take effect without restarting DMS.</p>
-<p>The script provides you with log messages along the way of creating keys. In case you want to read the complete log, use <code>-v</code> (verbose) or <code>-vv</code> (very verbose).</p>
-<hr />
-<p>In case you have not already provided a default DKIM signing configuration, the script will create one and write it to <code>/etc/rspamd/override.d/dkim_signing.conf</code>. If this file already exists, it will not be overwritten.</p>
-<p>When you're already using <a href="../../security/rspamd/#manually">the <code>rspamd/override.d/</code> directory</a>, the file is created inside your volume and therefore persisted correctly. If you are not using <code>rspamd/override.d/</code>, you will need to persist the file yourself (otherwise it is lost on container restart).</p>
-<p>An example of what a default configuration file for DKIM signing looks like can be found by expanding the example below.</p>
-</div>
-<details class="example">
-<summary>DKIM Signing Module Configuration Examples</summary>
-<p>A simple configuration could look like this:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># documentation: https://rspamd.com/doc/modules/dkim_signing.html</span>
-
-<span class="na">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">true</span><span class="c1">;</span>
-
-<span class="na">sign_authenticated</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">true</span><span class="c1">;</span>
-<span class="na">sign_local</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">true</span><span class="c1">;</span>
-
-<span class="na">use_domain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;header&quot;</span><span class="c1">;</span>
-<span class="na">use_redis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">false</span><span class="c1">; # don&#39;t change unless Redis also provides the DKIM keys</span>
-<span class="na">use_esld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">true</span><span class="c1">;</span>
-<span class="na">check_pubkey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">true</span><span class="c1">; # you want to use this in the beginning</span>
-
-<span class="na">selector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;mail&quot;</span><span class="c1">;</span>
-<span class="c1"># The path location is searched for a DKIM key with these variables:</span>
-<span class="c1"># - `$domain` is sourced from the MIME mail message `From` header</span>
-<span class="c1"># - `$selector` is configured for `mail` (as a default fallback)</span>
-<span class="na">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;/tmp/docker-mailserver/dkim/keys/$domain/$selector.private&quot;</span><span class="c1">;</span>
-
-<span class="c1"># domain specific configurations can be provided below:</span>
-<span class="na">domain {</span>
-<span class="w">    </span><span class="na">example.com {</span>
-<span class="w">        </span><span class="na">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;/tmp/docker-mailserver/rspamd/dkim/mail.private&quot;</span><span class="c1">;</span>
-<span class="w">        </span><span class="na">selector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;mail&quot;</span><span class="c1">;</span>
-<span class="w">    </span><span class="na">}</span>
-<span class="na">}</span>
-</code></pre></div>
-<p>As shown next:</p>
-<ul>
-<li>You can add more domains into the <code>domain { ... }</code> section (in the following example: <code>example.com</code> and <code>example.org</code>).</li>
-<li>A domain can also be configured with multiple selectors and keys within a <code>selectors [ ... ]</code> array (in the following example, this is done for <code>example.org</code>).</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="c1"># ...</span>
-
-<span class="na">domain {</span>
-<span class="w">    </span><span class="na">example.com {</span>
-<span class="w">        </span><span class="na">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/tmp/docker-mailserver/rspamd/example.com/ed25519.private&quot;</span><span class="c1">;</span>
-<span class="w">        </span><span class="na">selector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;dkim-ed25519&quot;</span><span class="c1">;</span>
-<span class="w">    </span><span class="na">}</span>
-<span class="w">    </span><span class="na">example.org {</span>
-<span class="w">        </span><span class="na">selectors [</span>
-<span class="w">            </span><span class="na">{</span>
-<span class="w">                </span><span class="na">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;/tmp/docker-mailserver/rspamd/dkim/example.org/rsa.private&quot;</span><span class="c1">;</span>
-<span class="w">                </span><span class="na">selector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;dkim-rsa&quot;</span><span class="c1">;</span>
-<span class="w">            </span><span class="na">},</span>
-<span class="w">            </span><span class="na">{</span>
-<span class="w">                </span><span class="na">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;/tmp/docker-mailserver/rspamd/dkim/example.org/ed25519.private&quot;</span><span class="c1">;</span>
-<span class="w">                </span><span class="na">selector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;dkim-ed25519&quot;</span><span class="c1">;</span>
-<span class="w">            </span><span class="na">}</span>
-<span class="w">        </span><span class="na">]</span>
-<span class="w">    </span><span class="na">}</span>
-<span class="na">}</span>
-</code></pre></div>
-</details>
-<details class="warning">
-<summary>Support for DKIM Keys using ED25519</summary>
-<p>This modern elliptic curve is supported by Rspamd, but support by third-parties for <a href="https://serverfault.com/questions/1023674/is-ed25519-well-supported-for-the-dkim-validation/1074545#1074545">verifying Ed25519 DKIM signatures is unreliable</a>.</p>
-<p>If you sign your mail with this key type, you should include RSA as a fallback, like shown in the above example.</p>
-</details>
-<details class="tip">
-<summary>Let Rspamd Check Your Keys</summary>
-<p>When <code>check_pubkey = true;</code> is set, Rspamd will query the DNS record for each DKIM selector, verifying each public key matches the private key configured.</p>
-<p>If there is a mismatch, a warning will be emitted to the Rspamd log <code>/var/log/mail/rspamd.log</code>.</p>
-</details>
-</div>
-</div>
-</div>
-<h3 id="dkim-dns"><a class="toclink" href="#dkim-dns">DNS Record</a></h3>
-<p>When mail signed with your DKIM key is sent from your mail server, the receiver needs to check a DNS <code>TXT</code> record to verify the DKIM signature is trustworthy.</p>
-<div class="admonition example">
-<p class="admonition-title">Configuring DNS - DKIM record</p>
-<p>When you generated your key in the previous step, the DNS data was saved into a file <code>&lt;selector&gt;.txt</code> (default: <code>mail.txt</code>). Use this content to update your <a href="https://www.vultr.com/docs/introduction-to-vultr-dns/">DNS via Web Interface</a> or directly edit your <a href="https://en.wikipedia.org/wiki/Zone_file">DNS Zone file</a>:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Web Interface</label><label for="__tabbed_2_2">DNS Zone file</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Create a new record:</p>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td><code>TXT</code></td>
-</tr>
-<tr>
-<td>Name</td>
-<td><code>&lt;selector&gt;._domainkey</code> (<em>default: <code>mail._domainkey</code></em>)</td>
-</tr>
-<tr>
-<td>TTL</td>
-<td>Use the default (<em>otherwise <a href="https://www.digicert.com/faq/dns/what-is-ttl">3600 seconds is appropriate</a></em>)</td>
-</tr>
-<tr>
-<td>Data</td>
-<td>File content within <code>( ... )</code> (<em>formatted as advised below</em>)</td>
-</tr>
-</tbody>
-</table>
-<p>When using Rspamd, the helper script has already provided you with the contents (the "Data" field) of the DNS record you need to create - you can just copy-paste this text.</p>
-</div>
-<div class="tabbed-block">
-<p><code>&lt;selector&gt;.txt</code> is already formatted as a snippet for adding to your <a href="https://en.wikipedia.org/wiki/Zone_file">DNS Zone file</a>.</p>
-<p>Just copy/paste the file contents into your existing DNS zone. The <code>TXT</code> value has been split into separate strings every 255 characters for compatibility.</p>
-</div>
-</div>
-</div>
-</div>
-<details class="info">
-<summary><code>&lt;selector&gt;.txt</code> - Formatting the <code>TXT</code> record value correctly</summary>
-<p>This file was generated for use within a <a href="https://en.wikipedia.org/wiki/Zone_file">DNS zone file</a>. The file name uses the DKIM selector it was generated with (default DKIM selector is <code>mail</code>, which creates <code>mail.txt</code>_).</p>
-<p>For your DNS setup, DKIM support needs to create a <code>TXT</code> record to store the public key for mail clients to use. <code>TXT</code> records with values that are longer than 255 characters need to be split into multiple parts. This is why the generated <code>&lt;selector&gt;.txt</code> file (<em>containing your public key for use with DKIM</em>) has multiple value parts wrapped within double-quotes between <code>(</code> and <code>)</code>.</p>
-<p>A DNS web-interface may handle this separation internally instead, and <a href="https://serverfault.com/questions/763815/route-53-doesnt-allow-adding-dkim-keys-because-length-is-too-long">could expect the value provided all as a single line</a> instead of split. When that is required, you'll need to manually format the value as described below.</p>
-<p>Your generated DNS record file (<code>&lt;selector&gt;.txt</code>) should look similar to this:</p>
-<div class="highlight"><pre><span></span><code>mail._domainkey IN TXT ( &quot;v=DKIM1; k=rsa; &quot;
-&quot;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqQMMqhb1S52Rg7VFS3EC6JQIMxNDdiBmOKZvY5fiVtD3Z+yd9ZV+V8e4IARVoMXWcJWSR6xkloitzfrRtJRwOYvmrcgugOalkmM0V4Gy/2aXeamuiBuUc4esDQEI3egmtAsHcVY1XCoYfs+9VqoHEq3vdr3UQ8zP/l+FP5UfcaJFCK/ZllqcO2P1GjIDVSHLdPpRHbMP/tU1a9mNZ&quot;
-&quot;5QMZBJ/JuJK/s+2bp8gpxKn8rh1akSQjlynlV9NI+7J3CC7CUf3bGvoXIrb37C/lpJehS39KNtcGdaRufKauSfqx/7SxA0zyZC+r13f7ASbMaQFzm+/RRusTqozY/p/MsWx8QIDAQAB&quot;
-) ;
-</code></pre></div>
-<p>Take the content between <code>( ... )</code>, and combine all the quote wrapped content and remove the double-quotes including the white-space between them. That is your <code>TXT</code> record value, the above example would become this:</p>
-<div class="highlight"><pre><span></span><code>v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqQMMqhb1S52Rg7VFS3EC6JQIMxNDdiBmOKZvY5fiVtD3Z+yd9ZV+V8e4IARVoMXWcJWSR6xkloitzfrRtJRwOYvmrcgugOalkmM0V4Gy/2aXeamuiBuUc4esDQEI3egmtAsHcVY1XCoYfs+9VqoHEq3vdr3UQ8zP/l+FP5UfcaJFCK/ZllqcO2P1GjIDVSHLdPpRHbMP/tU1a9mNZ5QMZBJ/JuJK/s+2bp8gpxKn8rh1akSQjlynlV9NI+7J3CC7CUf3bGvoXIrb37C/lpJehS39KNtcGdaRufKauSfqx/7SxA0zyZC+r13f7ASbMaQFzm+/RRusTqozY/p/MsWx8QIDAQAB
-</code></pre></div>
-<p>To test that your new DKIM record is correct, query it with the <code>dig</code> command. The <code>TXT</code> value response should be a single line split into multiple parts wrapped in double-quotes:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>dig<span class="w"> </span>+short<span class="w"> </span>TXT<span class="w"> </span>mail._domainkey.example.com
-<span class="go">&quot;v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqQMMqhb1S52Rg7VFS3EC6JQIMxNDdiBmOKZvY5fiVtD3Z+yd9ZV+V8e4IARVoMXWcJWSR6xkloitzfrRtJRwOYvmrcgugOalkmM0V4Gy/2aXeamuiBuUc4esDQEI3egmtAsHcVY1XCoYfs+9VqoHEq3vdr3UQ8zP/l+FP5UfcaJFCK/ZllqcO2P1GjIDVSHLdPpRHbMP/tU1a9mNZ5QMZBJ/JuJK/s+2bp8gpxKn8rh1akSQjlynlV9NI+7J3CC7CUf3bGvoXIrb37C/lpJehS39&quot; &quot;KNtcGdaRufKauSfqx/7SxA0zyZC+r13f7ASbMaQFzm+/RRusTqozY/p/MsWx8QIDAQAB&quot;</span>
-</code></pre></div>
-</details>
-<h3 id="dkim-debug"><a class="toclink" href="#dkim-debug">Troubleshooting</a></h3>
-<p><a href="https://mxtoolbox.com/dkim.aspx">MxToolbox has a DKIM Verifier</a> that you can use to check your DKIM DNS record(s).</p>
-<p>When using Rspamd, we recommend you turn on <code>check_pubkey = true;</code> in <code>dkim_signing.conf</code>. Rspamd will then check whether your private key matches your public key, and you can check possible mismatches by looking at <code>/var/log/mail/rspamd.log</code>.</p>
-<h2 id="dmarc"><a class="toclink" href="#dmarc">DMARC</a></h2>
-<p>With DMS, DMARC is pre-configured out of the box. You may disable extra and excessive DMARC checks when using Rspamd via <code>ENABLE_OPENDMARC=0</code>.</p>
-<p>The only thing you need to do in order to enable DMARC on a "DNS-level" is to add new <code>TXT</code>. In contrast to <a href="#dkim">DKIM</a>, DMARC DNS entries do not require any keys, but merely setting the <a href="https://github.com/internetstandards/toolbox-wiki/blob/master/DMARC-how-to.md#overview-of-dmarc-configuration-tags">configuration values</a>. You can either handcraft the entry by yourself or use one of available generators (like <a href="https://dmarcguide.globalcyberalliance.org">this one</a>).</p>
-<p>Typically something like this should be good to start with:</p>
-<div class="highlight"><pre><span></span><code>_dmarc.example.com. IN TXT &quot;v=DMARC1; p=none; sp=none; fo=0; adkim=r; aspf=r; pct=100; rf=afrf; ri=86400; rua=mailto:dmarc.report@example.com; ruf=mailto:dmarc.report@example.com&quot;
-</code></pre></div>
-<p>Or a bit more strict policies (<em>mind <code>p=quarantine</code> and <code>sp=quarantine</code></em>):</p>
-<div class="highlight"><pre><span></span><code>_dmarc.example.com. IN TXT &quot;v=DMARC1; p=quarantine; sp=quarantine; fo=0; adkim=r; aspf=r; pct=100; rf=afrf; ri=86400; rua=mailto:dmarc.report@example.com; ruf=mailto:dmarc.report@example.com&quot;
-</code></pre></div>
-<p>The DMARC status may not be displayed instantly due to delays in DNS (caches). Dmarcian has <a href="https://dmarcian.com/dmarc-tools/">a few tools</a> you can use to verify your DNS records.</p>
-<h2 id="spf"><a class="toclink" href="#spf">SPF</a></h2>
-<div class="admonition quote">
-<p class="admonition-title">What is SPF</p>
-<p>Sender Policy Framework (SPF) is a simple email-validation system designed to detect email spoofing by providing a mechanism to allow receiving mail exchangers to check that incoming mail from a domain comes from a host authorized by that domain's administrators.</p>
-<p><a href="https://en.wikipedia.org/wiki/Sender_Policy_Framework">Source</a></p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Disabling <code>policyd-spf</code>?</p>
-<p>As of now, <code>policyd-spf</code> cannot be disabled. This is WIP.</p>
-</div>
-<h3 id="adding-an-spf-record"><a class="toclink" href="#adding-an-spf-record">Adding an SPF Record</a></h3>
-<p>To add a SPF record in your DNS, insert the following line in your DNS zone:</p>
-<div class="highlight"><pre><span></span><code>example.com. IN TXT &quot;v=spf1 mx ~all&quot;
-</code></pre></div>
-<p>This enables the <em>Softfail</em> mode for SPF. You could first add this SPF record with a very low TTL. <em>SoftFail</em> is a good setting for getting started and testing, as it lets all email through, with spams tagged as such in the mailbox.</p>
-<p>After verification, you <em>might</em> want to change your SPF record to <code>v=spf1 mx -all</code> so as to enforce the <em>HardFail</em> policy. See <a href="http://www.open-spf.org/SPF_Record_Syntax">http://www.open-spf.org/SPF_Record_Syntax</a> for more details about SPF policies.</p>
-<p>In any case, increment the SPF record's TTL to its final value.</p>
-<h3 id="backup-mx-secondary-mx-for-policyd-spf"><a class="toclink" href="#backup-mx-secondary-mx-for-policyd-spf">Backup MX &amp; Secondary MX for <code>policyd-spf</code></a></h3>
-<p>For whitelisting an IP Address from the SPF test, you can create a config file (see <a href="https://www.linuxcertif.com/man/5/policyd-spf.conf"><code>policyd-spf.conf</code></a>) and mount that file into <code>/etc/postfix-policyd-spf-python/policyd-spf.conf</code>.</p>
-<p><strong>Example:</strong> Create and edit a <code>policyd-spf.conf</code> file at <code>docker-data/dms/config/postfix-policyd-spf.conf</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="na">debugLevel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1</span>
-<span class="c1">#0(only errors)-4(complete data received)</span>
-
-<span class="na">skip_addresses</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">127.0.0.0/8,::ffff:127.0.0.0/104,::1</span>
-
-<span class="c1"># Preferably use IP-Addresses for whitelist lookups:</span>
-<span class="na">Whitelist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">192.168.0.0/31,192.168.1.0/30</span>
-<span class="c1"># Domain_Whitelist = mx1.not-example.com,mx2.not-example.com</span>
-</code></pre></div>
-<p>Then add this line to <code>compose.yaml</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./docker-data/dms/config/postfix-policyd-spf.conf:/etc/postfix-policyd-spf-python/policyd-spf.conf</span>
-</code></pre></div>
+<p>You can also use notifications for Dovecot alias mailboxes. Depending on your server configuration, this might require to add the original Dovecot username as <a href="https://doc.dovecot.org/configuration_manual/authentication/user_database_extra_fields/">Dovecot attribute</a> to the login user as well as changing the <code>user_lookup=theattribute</code> in <code>95-xaps.conf</code> to perform the lookup of that attribute.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 
